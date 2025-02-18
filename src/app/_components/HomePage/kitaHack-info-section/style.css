@@ -1,0 +1,174 @@
+.section {
+    position: absolute;
+    width: 1024px;
+    height: 580px;
+    left: calc(50% - 1024px/2 + 24px);
+    top: 1191.99px;
+}
+
+.div {
+    position: absolute;
+    width: 517.19px;
+    height: 580px;
+    left: 32px;
+    top: calc(50% - 580px/2);
+}
+
+.h2 {
+    position: absolute;
+    width: 372.73px;
+    height: 48px;
+    left: 0px;
+    top: 0px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    color: #374151;
+}
+
+
+.h3 {
+    position: absolute;
+    width: 129.07px;
+    height: 24px;
+    left: 0px;
+    top: 82px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #374151;
+}
+
+.p-kitahack {
+    position: absolute;
+    width: 501.75px;
+    height: 115px;
+    left: 0px;
+    top: 2px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+    display: flex;
+    align-items: center;
+
+    color: #374151;
+}
+
+.h3-purpose {
+    position: absolute;
+    width: 75.38px;
+    height: 24px;
+    left: 0px;
+    top: 254px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+
+    color: #374151;
+}
+
+.p-purpose {
+    position: absolute;
+    width: 505.92px;
+    height: 115px;
+    left: 0px;
+    top: 2px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+
+    color: #374151;
+}
+
+
+
+
+/* Heading 3 → Theme */
+.h3-theme {
+    position: absolute;
+    width: 62.89px;
+    height: 24px;
+    left: 0px;
+    top: 426px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    /* or 140% */
+    display: flex;
+    align-items: center;
+
+    color: #374151;
+}
+
+
+
+
+/* p.max-w-prose */
+/*
+  position: absolute;
+  height: 120px;
+  left: 0px;
+  right: 0px;
+  top: 460px;
+   */
+
+
+/* KitaHack centers around the United Nations' 17 Sustainable Development Goals (SDGs). During the event, you'll be challenged to create a project that helps solve one or more of these goals using Google technologies. It's a chance to make a real difference in the world and learn new skills at the same time. */
+.h3-kitahack3 {
+    position: absolute;
+    width: 509.33px;
+    height: 115px;
+    left: 0px;
+    top: 2px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+    display: flex;
+    align-items: center;
+
+    color: #374151;
+}
+
+
+
+
+/* kitahack-logo.png */
+.kitahack-logo {
+    position: absolute;
+    height: 442.81px;
+    left: 549.19px;
+    right: 32px;
+    top: 68.59px;
+
+
+}

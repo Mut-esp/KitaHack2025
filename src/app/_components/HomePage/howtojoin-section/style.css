@@ -1,0 +1,24 @@
+.left-chatbox{
+    @apply mr-auto text-white;
+}
+
+.right-chatbox{
+    @apply ml-auto text-black; 
+}
+
+.common-style{
+    @apply relative w-fit rounded-xl p-3 h-fit sm:max-w-[60%] z-[1] 
+}
+
+/* Adjust left tail */
+.left-tail {
+    @apply absolute -left-4 bottom-2 w-0 h-0 border-t-[15px] border-t-transparent;
+    border-right: 20px solid #4285F4; /* Match the blue chatbox */
+}
+
+
+/* Adjust right tail */
+.right-tail {
+    @apply absolute -right-4 bottom-2 w-0 h-0 border-t-[15px] border-t-transparent;
+    border-left: 20px solid #DB4437; /* Match the red chatbox */
+}
