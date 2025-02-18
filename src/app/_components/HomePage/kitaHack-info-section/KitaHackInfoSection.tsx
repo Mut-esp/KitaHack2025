@@ -1,4 +1,5 @@
-import "./style.css"
+import Image from "next/image";
+import "./style.css";
 
 const KitaHackInfoSection = () => {
     return (
@@ -39,12 +40,19 @@ const KitaHackInfoSection = () => {
                     </div>
 
                     <div className="self-center hidden p-20 lg:block">
-                        <img src="images/kitahack.png" alt="Kitahack 2024 Logo" className="self-center max-w-[300px]"/>
+                        <Image
+                            src="/images/kitahack.png"
+                            width={300}
+                            height={300}
+                            alt="Kitahack 2024 Logo"
+                            className="self-center max-w-[300px]"
+                            priority
+                        />
                     </div>
                 </div>
             </div>
         </section>
+    );
+};
 
-    )
-}
-export default KitaHackInfoSection
+export default KitaHackInfoSection;

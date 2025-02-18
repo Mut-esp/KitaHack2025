@@ -1,5 +1,5 @@
 "use client"
-
+import Image from "next/image";
 import {
     Menubar,
     MenubarContent,
@@ -34,8 +34,8 @@ import {
 
 } from "@/components/ui/sidebar"
 import { cn } from "@/lib/utils";
-import {ChevronsUpDown } from "lucide-react"
-import { forwardRef, ReactNode} from "react";
+import { ChevronsUpDown } from "lucide-react"
+import { forwardRef, ReactNode } from "react";
 
 
 
@@ -147,15 +147,7 @@ const moreContents: { title: string; href: string; description: string; src: str
 
 
 const HeaderFooter = ({ children }: { children: ReactNode }) => {
-    // const {
-    //     state,
-    //     open,
-    //     setOpen,
-    //     openMobile,
-    //     setOpenMobile,
-    //     isMobile,
-    //     toggleSidebar,
-    // } = useSidebar()
+
 
     return (
         <SidebarProvider className={"block"} defaultOpen={false}>
@@ -163,7 +155,7 @@ const HeaderFooter = ({ children }: { children: ReactNode }) => {
             <header className="h-16 text-[15px] fixed z-20 inset-0 bg-white">
                 <nav className="mx-6 lg:mx-40 flex lg:justify-between items-center h-full">
                     <div className="flex items-center">
-                        <img src="images/kitahack2024.png" alt="" className="h-14 w-auto" />
+                        <Image src="/images/kitahack2024.png" alt="" width={56} height={56} className="h-14 w-auto" />
                     </div>
 
 
@@ -326,9 +318,11 @@ const MoreMobileItem = forwardRef<
             >
                 {/* Icon */}
                 {src && (
-                    <img
+                    <Image
                         src={src}
                         alt={`${title} icon`}
+                        width={24}
+                        height={24}
                         className="w-6 h-6 flex-shrink-0"
                     />
                 )}
@@ -336,9 +330,7 @@ const MoreMobileItem = forwardRef<
                 {/* Text Content */}
                 <div className="flex flex-col justify-center">
                     <div className="text-sm font-medium leading-none">{title}</div>
-                    {/* <p className="text-sm leading-snug text-muted-foreground">
-                        {children}
-                    </p> */}
+                   
                 </div>
             </a>
         </SidebarMenuSubItem>
@@ -364,9 +356,11 @@ const MoreItem = forwardRef<
             >
                 {/* Icon */}
                 {src && (
-                    <img
+                    <Image
                         src={src}
                         alt={`${title} icon`}
+                        width={24}
+                        height={24}
                         className="w-6 h-6 flex-shrink-0"
                     />
                 )}

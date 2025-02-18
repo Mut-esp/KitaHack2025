@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface MentorProps {
     name?: string;
     title?: string;
@@ -17,10 +19,12 @@ const AppMentor: React.FC<MentorProps> = ({
         <div className="relative flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-md w-[300px] my-14 dark:bg-gray-700">
             {/* Mentor Image */}
             <div className="absolute top-0 overflow-hidden -translate-x-1/2 -translate-y-1/2 rounded-full shadow-xl left-2/4 w-38 h-38">
-                <img
+                <Image
                     className="object-cover w-full aspect-square brightness-50 dark:brightness-100"
                     src={imageUrl}
                     alt={name}
+                    width={152}
+                    height={152}
                 />
             </div>
 
