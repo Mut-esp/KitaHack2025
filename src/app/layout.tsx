@@ -4,7 +4,9 @@ import type { Metadata } from "next";
 import * as React from "react"
 
 import "./globals.css";
-import HeaderFooter from "./_components/layouts/HeaderFooter";
+import HeaderFooter from "./_components/layouts/Header";
+import Footer from "./_components/layouts/Footer";
+import { SidebarProvider } from "@/components/ui/sidebar";
 
 
 
@@ -33,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  
+
 
   return (
 
@@ -41,10 +43,14 @@ export default function RootLayout({
       <body
         className={`antialiased`}
       >
-        <HeaderFooter>
-        
+        <SidebarProvider className={"block"} defaultOpen={false}>
+          <HeaderFooter />
+
           {children}
-        </HeaderFooter>
+
+          <Footer />
+
+        </SidebarProvider>
       </body>
     </html>
   );
