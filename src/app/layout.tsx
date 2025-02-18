@@ -2,11 +2,10 @@
 import type { Metadata } from "next";
 
 import * as React from "react"
-import { cn } from "@/lib/utils"
-import localFont from "next/font/local";
+
 import "./globals.css";
 import HeaderFooter from "./_components/layouts/HeaderFooter";
-import { Sidebar, SidebarTrigger } from "@/components/ui/sidebar";
+
 
 
 // const geistSans = localFont({

@@ -1,12 +1,10 @@
 "use client"
-import { useSidebar } from "@/components/ui/sidebar"
+
 import {
     Menubar,
     MenubarContent,
     MenubarItem,
     MenubarMenu,
-    MenubarSeparator,
-    MenubarShortcut,
     MenubarSubContent,
     MenubarSubTrigger,
     MenubarSub,
@@ -22,23 +20,22 @@ import {
 import {
     Sidebar,
     SidebarContent,
-    SidebarFooter,
     SidebarGroup,
-    SidebarHeader,
+
     SidebarGroupContent,
     SidebarMenu,
     SidebarProvider,
     SidebarTrigger,
     SidebarMenuItem,
     SidebarMenuButton,
-    SidebarGroupLabel,
+
     SidebarMenuSub,
     SidebarMenuSubItem,
-    SidebarMenuSubButton,
+
 } from "@/components/ui/sidebar"
 import { cn } from "@/lib/utils";
-import { Calendar, ChevronsUpDown, Home, Inbox, Search, Settings } from "lucide-react"
-import { forwardRef, ReactNode, useState } from "react";
+import {ChevronsUpDown } from "lucide-react"
+import { forwardRef, ReactNode} from "react";
 
 
 
