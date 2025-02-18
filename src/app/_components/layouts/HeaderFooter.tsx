@@ -144,9 +144,12 @@ const moreContents: { title: string; href: string; description: string; src: str
     }
 ]
 
+interface HeaderFooterProps {
+    children: React.ReactNode;
+}
 
 
-const HeaderFooter = ({ children }: { children: ReactNode }) => {
+const HeaderFooter: React.FC<HeaderFooterProps> = ({ children }) => {
 
 
     return (
@@ -330,7 +333,7 @@ const MoreMobileItem = forwardRef<
                 {/* Text Content */}
                 <div className="flex flex-col justify-center">
                     <div className="text-sm font-medium leading-none">{title}</div>
-                   
+
                 </div>
             </a>
         </SidebarMenuSubItem>
