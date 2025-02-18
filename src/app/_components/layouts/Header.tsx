@@ -24,7 +24,6 @@ import {
 
     SidebarGroupContent,
     SidebarMenu,
-    SidebarProvider,
     SidebarTrigger,
     SidebarMenuItem,
     SidebarMenuButton,
@@ -35,7 +34,7 @@ import {
 } from "@/components/ui/sidebar"
 import { cn } from "@/lib/utils";
 import { ChevronsUpDown } from "lucide-react"
-import { forwardRef, ReactNode } from "react";
+import { forwardRef } from "react";
 
 
 
@@ -270,7 +269,7 @@ export default Header
 const MoreMobileItem = forwardRef<
     React.ElementRef<"a">,
     React.ComponentPropsWithoutRef<"a"> & { src?: string }
->(({ className, title, src, children, ...props }, ref) => {
+>(({ className, title, src, ...props }, ref) => {
     return (
         <SidebarMenuSubItem>
             <a
