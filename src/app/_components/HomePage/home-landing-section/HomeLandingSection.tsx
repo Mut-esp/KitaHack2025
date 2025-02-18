@@ -3,7 +3,7 @@ import "./style.css";
 
 const HomeLandingSection = () => {
     return (
-        <section className="flex items-center">
+        <section className="flex items-center lg:mt-20">
             <div className="container px-6 mx-auto">
                 <div className="px-6 text-center text-gray-800 md:px-12 lg:text-left xl:px-52">
                     <div className="grid items-center gap-12 lg:grid-cols-2">
