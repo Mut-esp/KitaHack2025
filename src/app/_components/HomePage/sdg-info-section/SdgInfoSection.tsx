@@ -8,7 +8,7 @@ const SdgInfoSection = () => {
       <div className="px-6 text-gray-800 md:px-12 lg:text-left xl:px-52">
         {/* Intro Section */}
         <section className="items-center text-center text-gray-700 dark:text-gray-400">
-          <h2 className="font-semibold leading-7 lg:text-center text-google-green-500">
+          <h2 className="font-semibold leading-7 lg:text-center text-green-500">
             Join to preserve the environment!
           </h2>
           <p className="mt-2 text-3xl lg:text-center font-[GoogleSans-Bold] font-bold tracking-tight text-gray-700 sm:text-4xl">

@@ -25,7 +25,7 @@ const Footer = () => {
                 </div>
                 <div className="mt-8 md:order-1 md:mt-0">
                     <p className="text-xs leading-5 text-center text-gray-500">
-                        &copy; 2024 GDSC Malaysia&trade;. All Rights Reserved.
+                        &copy; 2025 GDG Malaysia&trade;. All Rights Reserved.
                     </p>
                 </div>
             </div>

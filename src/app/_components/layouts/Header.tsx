@@ -145,123 +145,122 @@ const moreContents: { title: string; href: string; description: string; src: str
 
 
 
-const Header = ({  }) => {
+const Header = ({ }) => {
 
 
     return (
-        
 
-            <header className="h-16 text-[15px] fixed z-20 inset-0 bg-white">
-                <nav className="mx-6 lg:mx-40 flex lg:justify-between items-center h-full">
-                    <div className="flex items-center">
-                        <Image src="/images/kitahack2024.png" alt="" width={56} height={56} className="h-14 w-auto" />
-                    </div>
-
-
-                    <div className={"hidden lg:block"}>
-                        <Menubar>
-                            <MenubarMenu>
-                                <MenubarTrigger><a href="#faqs">FAQs</a></MenubarTrigger>
-                            </MenubarMenu>
-                            <MenubarMenu>
-                                <MenubarTrigger>Events</MenubarTrigger>
-                                <MenubarContent className={"max-w-24 text-right"} align="end">
-                                    {eventsContents.map((event) => (
-                                        <EventItem key={event.title} title={event.title} href={event.href} subEvents={event.subEvents} />
-                                    ))}
-                                </MenubarContent>
-                            </MenubarMenu>
-
-                            <MenubarMenu>
-                                <MenubarTrigger>More</MenubarTrigger>
-                                <MenubarContent align="end" className={"max-h-64 overflow-y-auto hidden lg:block"}>
-                                    {moreContents.map((moreContent) => (
-                                        <MoreItem
-                                            key={moreContent.title}
-                                            title={moreContent.title}
-                                            src={moreContent.src}
-                                            href={moreContent.href}
-                                            className={"px-2 py-4"}
-                                        >
-                                            {moreContent.description}
-                                        </MoreItem>
-                                    ))}
-                                </MenubarContent>
-                            </MenubarMenu>
-                        </Menubar>
-                    </div>
-
-                    <SidebarTrigger className={"lg:hidden ml-auto"} />
-                    <div className={"lg:hidden"}>
-                        <Sidebar side={"right"} collapsible={"offcanvas"} variant={"sidebar"}>
-                            <SidebarContent>
-                                <SidebarGroup>
-                                    <SidebarGroupContent>
-                                        <SidebarMenu>
-                                            <Collapsible defaultOpen className="group/collapsible">
-                                                <SidebarMenuItem>
-                                                    <CollapsibleTrigger asChild>
-                                                        <SidebarMenuButton>
-                                                            KitaHack 2025 Info
-
-                                                            <ChevronsUpDown className="h-4 w-4" />
-
-                                                        </SidebarMenuButton>
-                                                    </CollapsibleTrigger>
-                                                    <CollapsibleContent>
-                                                        <SidebarMenuSub>
-                                                            {moreContents.map((moreContent) => (
+        <header className="h-16 text-[15px] fixed z-20 inset-0 bg-white">
+            <nav className="mx-6 lg:mx-40 flex lg:justify-between items-center h-full">
+                <div className="flex items-center">
+                    <Image src="/images/kitahack2024.png" alt="" width={56} height={56} className="h-14 w-auto" />
+                </div>
 
 
-                                                                <MoreMobileItem
-                                                                    key={moreContent.title}
-                                                                    title={moreContent.title}
-                                                                    src={moreContent.src}
-                                                                    href={moreContent.href}
-                                                                    className={"px-2 py-3"}
-                                                                >
-                                                                    {moreContent.description}
-                                                                </MoreMobileItem>
+                <div className={"hidden lg:block"}>
+                    <Menubar>
+                        <MenubarMenu>
+                            <MenubarTrigger><a href="#faqs">FAQs</a></MenubarTrigger>
+                        </MenubarMenu>
+                        <MenubarMenu>
+                            <MenubarTrigger>Events</MenubarTrigger>
+                            <MenubarContent className={"max-w-24"} align="end">
+                                {eventsContents.map((event) => (
+                                    <EventItem key={event.title} title={event.title} href={event.href} subEvents={event.subEvents} />
+                                ))}
+                            </MenubarContent>
+                        </MenubarMenu>
+
+                        <MenubarMenu>
+                            <MenubarTrigger>More</MenubarTrigger>
+                            <MenubarContent align="end" className={"max-h-64 overflow-y-auto hidden lg:block"}>
+                                {moreContents.map((moreContent) => (
+                                    <MoreItem
+                                        key={moreContent.title}
+                                        title={moreContent.title}
+                                        src={moreContent.src}
+                                        href={moreContent.href}
+                                        className={"px-2 py-4"}
+                                    >
+                                        {moreContent.description}
+                                    </MoreItem>
+                                ))}
+                            </MenubarContent>
+                        </MenubarMenu>
+                    </Menubar>
+                </div>
+
+                <SidebarTrigger className={"lg:hidden ml-auto"} />
+                <div className={"lg:hidden"}>
+                    <Sidebar side={"right"} collapsible={"offcanvas"} variant={"sidebar"}>
+                        <SidebarContent>
+                            <SidebarGroup>
+                                <SidebarGroupContent>
+                                    <SidebarMenu>
+                                        <Collapsible defaultOpen className="group/collapsible">
+                                            <SidebarMenuItem>
+                                                <CollapsibleTrigger asChild>
+                                                    <SidebarMenuButton>
+                                                        KitaHack 2025 Info
+
+                                                        <ChevronsUpDown className="h-4 w-4" />
+
+                                                    </SidebarMenuButton>
+                                                </CollapsibleTrigger>
+                                                <CollapsibleContent>
+                                                    <SidebarMenuSub>
+                                                        {moreContents.map((moreContent) => (
 
 
-                                                            ))}
-
-                                                        </SidebarMenuSub>
-                                                    </CollapsibleContent>
-                                                </SidebarMenuItem>
-                                            </Collapsible>
-                                            <Collapsible defaultOpen className="group/collapsible">
-                                                <SidebarMenuItem>
-                                                    <CollapsibleTrigger asChild>
-                                                        <SidebarMenuButton>
-                                                            Events
-
-                                                            <ChevronsUpDown className="h-4 w-4" />
-
-                                                        </SidebarMenuButton>
-                                                    </CollapsibleTrigger>
-                                                    <CollapsibleContent>
-                                                        <SidebarMenuSub>
-                                                            {eventsContents.map((event) => (
-                                                                <EventMobileItem key={event.title} title={event.title} href={event.href} subEvents={event.subEvents} />
-                                                            ))}
-
-                                                        </SidebarMenuSub>
-                                                    </CollapsibleContent>
-                                                </SidebarMenuItem>
-                                            </Collapsible>
-                                        </SidebarMenu>
-                                    </SidebarGroupContent>
-                                </SidebarGroup>
-
-                            </SidebarContent>
-                        </Sidebar>
-
-                    </div>
-                </nav>
+                                                            <MoreMobileItem
+                                                                key={moreContent.title}
+                                                                title={moreContent.title}
+                                                                src={moreContent.src}
+                                                                href={moreContent.href}
+                                                                className={"px-2 py-3"}
+                                                            >
+                                                                {moreContent.description}
+                                                            </MoreMobileItem>
 
 
-            </header>
+                                                        ))}
+
+                                                    </SidebarMenuSub>
+                                                </CollapsibleContent>
+                                            </SidebarMenuItem>
+                                        </Collapsible>
+                                        <Collapsible defaultOpen className="group/collapsible">
+                                            <SidebarMenuItem>
+                                                <CollapsibleTrigger asChild>
+                                                    <SidebarMenuButton>
+                                                        Events
+
+                                                        <ChevronsUpDown className="h-4 w-4" />
+
+                                                    </SidebarMenuButton>
+                                                </CollapsibleTrigger>
+                                                <CollapsibleContent>
+                                                    <SidebarMenuSub>
+                                                        {eventsContents.map((event) => (
+                                                            <EventMobileItem key={event.title} title={event.title} href={event.href} subEvents={event.subEvents} />
+                                                        ))}
+
+                                                    </SidebarMenuSub>
+                                                </CollapsibleContent>
+                                            </SidebarMenuItem>
+                                        </Collapsible>
+                                    </SidebarMenu>
+                                </SidebarGroupContent>
+                            </SidebarGroup>
+
+                        </SidebarContent>
+                    </Sidebar>
+
+                </div>
+            </nav>
+
+
+        </header>
     )
 }
 export default Header
@@ -368,12 +367,14 @@ const EventItem = forwardRef<
                 ref={ref}
                 href={href}
                 className={cn(
-                    "flex flex-col gap-1 px-3 py-2 rounded-md transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                    "w-full flex justify-end gap-1 px-3 py-2 rounded-md transition-colors",
+                    "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
                     className
                 )}
                 {...props}
             >
-                <div className="text-sm font-medium leading-none">{title}</div>
+              
+                <div className="text-sm font-medium leading-none text-right">{title}</div>
             </a>
         </MenubarItem>
     );

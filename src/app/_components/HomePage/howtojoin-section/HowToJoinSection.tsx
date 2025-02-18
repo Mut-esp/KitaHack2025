@@ -6,7 +6,7 @@ export default function HowToJoinSection() {
   return (
     <section id="how-to-join" className="container px-6 mx-auto">
       <div className="flex flex-col px-6 text-gray-800 md:px-12 lg:text-left xl:px-52">
-        <h2 className="font-semibold leading-7 lg:text-center text-google-yellow-500">
+        <h2 className="font-semibold leading-7 lg:text-center text-yellow-500">
           How to join?
         </h2>
         <p className="lg:text-center mt-2 text-3xl font-bold tracking-tight text-gray-700 sm:text-4xl">

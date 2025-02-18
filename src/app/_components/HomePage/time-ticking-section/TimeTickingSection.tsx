@@ -42,7 +42,7 @@ const TimeTickingSection = () => {
     return (
         <section className="container px-6 mx-auto bg-center bg-no-repeat bg-cover">
             <div className="px-6 text-gray-800 md:px-12 lg:text-left xl:px-52">
-                <h2 className="font-semibold leading-7 text-center text-google-red-500">
+                <h2 className="font-semibold leading-7 text-center text-red-500">
                     Time ticking ⏰
                 </h2>
                 <p className="mt-2 text-3xl text-center font-[GoogleSans-Bold] font-bold">
