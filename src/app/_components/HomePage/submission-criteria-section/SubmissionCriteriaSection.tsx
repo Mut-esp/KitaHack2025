@@ -30,11 +30,10 @@ const SubmissionCriteriaSection = () => {
                                 <div className="content">
                                     <ol className="pl-5 space-y-4 list-decimal">
                                         <li>
-                                            Please clearly describe the challenge you are solving using a problem statement
+                                            Describe the challenge addressed by your project
                                         </li>
                                         <li>
-                                            What United Nations' Sustainable Development goal(s) AND target(s) did you choose for your solution?
-                                            What inspired you to select these specific goal(s) AND target(s)?
+                                            Describe the UN Sustainable Development goal(s) and target(s) chosen for your solution, along with your reasons.
                                         </li>
                                     </ol>
                                 </div>
@@ -55,12 +54,10 @@ const SubmissionCriteriaSection = () => {
                                 <div className="content">
                                     <ol className="pl-5 space-y-4 list-decimal ">
                                         <li>
-                                            Describe the architecture that your team chose for you solutaion
-                                            What are the high-level components of your architecture? What is the
-                                            responsibility of each component?
+                                            Describe your team's solution architecture and the responsibilities of each component.
                                         </li>
                                         <li>
-                                            Which specific products and platforms did you choose to implement these components and why?
+                                            Specify the products and platforms chosen for implementation and explain the reasons. (Please make sure there is at least one Google Developer Technology)
                                         </li>
                                     </ol>
                                 </div>
@@ -81,16 +78,13 @@ const SubmissionCriteriaSection = () => {
                                 <div className="content">
                                     <ul className="pl-5 space-y-4 list-decimal ">
                                         <li>
-                                            Walk us through the step you took to test your solution with real users
-                                            (outside of your team). Provide three specific feedback points you received from real users.
+                                            Walk us through the steps you took to test your solution with real users (outside of your team). Provide three specific feedback points.
                                         </li>
                                         <li>
-                                            What did you learn and how did it help improve your solution? What are three specific things you implemented
-                                            and improved for your solution based on the feedback from users?
+                                            What did you learn from user feedback, and how did it enhance your solution? List three specific implementations based on user input.
                                         </li>
                                         <li>
-                                            Highlight one challenge you face while building your code, including details on how you addressed the issues and
-                                            the technical decisions and implmentations you had to make
+                                            Highlight a coding challenge faced during development, including the detail on how you addressed it and the technical decisions made.
                                         </li>
                                     </ul>
                                 </div>
@@ -111,14 +105,10 @@ const SubmissionCriteriaSection = () => {
                                 <div className="content">
                                     <ul className="pl-5 space-y-4 list-decimal">
                                         <li>
-                                            How does your solution address the challenge you are looking to solve for? Describe the success of your solution using metrics,
-                                            goals, and outcome. What Google technologies are you using to track usgae analytics? Using relevent (or meaningful) statistics,
-                                            concrete data or numerical examples where possible
+                                            Describe how your solution addresses the challenge, emphasizing success using metrics, goals, and outcomes.
                                         </li>
                                         <li>
-                                            Upload a copy of your demo video. Make sure the video demostrate a working application and how a user will interact with the
-                                            solution. Make sure the video also makes effective use of chosen Google products. Feel free to include infographics or visual
-                                            representation of the data in you demo video
+                                            What Google technologies are used for tracking usage analytics? Share relevant statistics or, where numbers aren't available, describe your project's impact using cause and effect.
                                         </li>
                                     </ul>
                                 </div>
@@ -142,11 +132,11 @@ const SubmissionCriteriaSection = () => {
                                 <div className="content">
                                     <ul className="pl-5 space-y-4 list-decimal">
                                         <li>
-                                            What do you see as the future / next steps for your projects? How would you expand your solution to reach a larger audience?
+                                            Outline the future steps for your project and how you plan to expand it for a larger audience.
                                         </li>
                                         <li>
-                                            Explain how the techinical architecture of your solution could support (in its current state or with minor changes) scaling
-                                            to a larger audience
+                                            Explain how the current technical architecture (or with minor changes) in your solution supports scaling or can be adapted for a larger audience.
+
                                         </li>
                                     </ul>
                                 </div>

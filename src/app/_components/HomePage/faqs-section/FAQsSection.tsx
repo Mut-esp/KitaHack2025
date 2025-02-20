@@ -13,11 +13,12 @@ const FAQsSection = () => {
     },
     {
       q: 'Who owns the app/solution that my team creates during KitaHack?',
-      a: 'Your team will retain ownership of the app/solution that you create during KitaHack.',
+      a: 'Participants will still retain the ownership of the app/solution that you create during KitaHack. However, participants will grant event organizers a non-exclusive royalty-free license to showcase and promote your projects for marketing and educational purposes.',
     },
     {
-      q: 'Can I pick a solution outside the scope of the 17 Sustainable Development Goals (SDGs)?',
-      a: 'While you are welcome to explore any solution ideas, for the purpose of the Global Solution Challenge (GSC) and KitHack 2024 competition, you are required to select a theme within the 17 SDGs.',
+      q: 'Can I pick a solution outside the scope of AI and SDGs?',
+      a: 'While you are welcome to explore any solution ideas, for the purpose of KitaHack 2025 competition, you are required relate your project with at least one of the 17 SDGs with the integration of AI.' 
+
     },
     {
       q: 'What happens after KitaHack?',
