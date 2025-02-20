@@ -60,6 +60,11 @@ type EventContent = {
 const eventsContents: EventContent[] = [
 
     {
+        title: "No Events Yet",
+        href: "",
+        subEvents: undefined, // Set subEvents to undefined instead of null
+    }, // use this for no events
+    {
         title: "Demo Day",
         href: "",
         subEvents: undefined, // Set subEvents to undefined instead of null
@@ -78,6 +83,10 @@ const eventsContents: EventContent[] = [
         title: "Workshops",
         href: "",
         subEvents: [
+            {
+                title: "No Workshops Yet",
+                href: "",
+            }, // use this for no workshops
             {
                 title: "Sunway React & Firebase Workshop Series",
                 href: "/ReactAndFirebaseWorkshop",
