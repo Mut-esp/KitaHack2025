@@ -32,6 +32,11 @@ import {
     SidebarMenuSubItem,
 
 } from "@/components/ui/sidebar"
+
+
+import { useSidebar } from "@/components/ui/sidebar"
+
+
 import { cn } from "@/lib/utils";
 import { ChevronsUpDown } from "lucide-react"
 import { forwardRef } from "react";
@@ -81,7 +86,7 @@ const eventsContents: EventContent[] = [
                 title: "KDU Android Workshop",
                 href: "#sub-event-2",
             },
-        ], 
+        ],
     }
 ];
 
@@ -151,6 +156,176 @@ const moreContents: { title: string; href: string; description: string; src: str
 const Header = ({ }) => {
 
 
+    const {
+        toggleSidebar,
+    } = useSidebar()
+
+    const MoreMobileItem = forwardRef<
+        React.ElementRef<"a">,
+        React.ComponentPropsWithoutRef<"a"> & { src?: string }
+    >(({ className, title, src, ...props }, ref) => {
+        return (
+            <SidebarMenuSubItem>
+                <a
+                    ref={ref}
+                    className={cn(
+                        "flex items-center gap-3 select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                        className
+                    )}
+                    {...props}
+                >
+                    {/* Icon */}
+                    {src && (
+                        <Image
+                            src={src}
+                            alt={`${title} icon`}
+                            width={24}
+                            height={24}
+                            className="w-6 h-6 flex-shrink-0"
+                        />
+                    )}
+
+                    {/* Text Content */}
+                    <div className="flex flex-col justify-center">
+                        <div className="text-sm font-medium leading-none">{title}</div>
+
+                    </div>
+                </a>
+            </SidebarMenuSubItem>
+        );
+    });
+
+    MoreMobileItem.displayName = "MoreItem";
+
+
+    const MoreItem = forwardRef<
+        React.ElementRef<"a">,
+        React.ComponentPropsWithoutRef<"a"> & { src?: string }
+    >(({ className, title, src, children, ...props }, ref) => {
+        return (
+            <MenubarItem asChild>
+                <a
+                    ref={ref}
+                    className={cn(
+                        "flex items-center gap-3 select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                        className
+                    )}
+                    {...props}
+                >
+                    {/* Icon */}
+                    {src && (
+                        <Image
+                            src={src}
+                            alt={`${title} icon`}
+                            width={24}
+                            height={24}
+                            className="w-6 h-6 flex-shrink-0"
+                        />
+                    )}
+
+                    {/* Text Content */}
+                    <div className="flex flex-col justify-center">
+                        <div className="text-sm font-medium leading-none">{title}</div>
+                        <p className="text-sm leading-snug text-muted-foreground">
+                            {children}
+                        </p>
+                    </div>
+                </a>
+            </MenubarItem>
+        );
+    });
+    MoreItem.displayName = "MoreItem";
+
+
+    const EventItem = forwardRef<
+        React.ElementRef<"a">,
+        React.ComponentPropsWithoutRef<"a"> & {
+            title: string;
+            href?: string;
+            subEvents?: { title: string; href: string }[];
+        }
+    >(({ className, title, href, subEvents, ...props }, ref) => {
+        return subEvents && subEvents.length > 0 ? (
+            <MenubarSub>
+                <MenubarSubTrigger className={"justify-center"}>{title}</MenubarSubTrigger>
+                <MenubarSubContent>
+                    {subEvents.map((subEvent) => (
+                        <MenubarItem key={subEvent.title} asChild>
+                            <Link href={subEvent.href}>{subEvent.title}</Link>
+                        </MenubarItem>
+                    ))}
+                </MenubarSubContent>
+            </MenubarSub>
+        ) : (
+            <MenubarItem asChild>
+                <Link
+                    ref={ref}
+                    href={href || "#"}
+                    className={cn(
+                        "w-full flex justify-end gap-1 px-3 py-2 rounded-md transition-colors",
+                        "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                        className
+                    )}
+                    {...props}
+                >
+                    <div className="text-sm font-medium leading-none text-right">{title}</div>
+                </Link>
+            </MenubarItem>
+        );
+    });
+    EventItem.displayName = "EventItem";
+
+    const EventMobileItem = forwardRef<
+        React.ElementRef<"a">,
+        React.ComponentPropsWithoutRef<"a"> & {
+            title: string;
+            href?: string;
+            subEvents?: { title: string; href: string }[];
+        }
+    >(({ className, title, href, subEvents, ...props }, ref) => {
+        return subEvents && subEvents.length > 0 ? (
+            <SidebarMenu>
+                <Collapsible defaultOpen className="group/collapsible">
+                    <SidebarMenuItem>
+                        <CollapsibleTrigger asChild>
+                            <SidebarMenuButton>
+                                {title}
+                                <ChevronsUpDown className="h-4 w-4" />
+                            </SidebarMenuButton>
+                        </CollapsibleTrigger>
+                        <CollapsibleContent>
+                            <SidebarMenuSub>
+                                {subEvents.map((subEvent) => (
+                                    <SidebarMenuSubItem key={subEvent.title}>
+                                        <Link href={subEvent.href} onClick={() => toggleSidebar()}>{subEvent.title}</Link>
+                                    </SidebarMenuSubItem>
+                                ))}
+                            </SidebarMenuSub>
+                        </CollapsibleContent>
+                    </SidebarMenuItem>
+                </Collapsible>
+            </SidebarMenu>
+        ) : (
+            <SidebarMenuSubItem>
+                <Link
+                    ref={ref}
+                    href={href || "#"}
+                    onClick={() => toggleSidebar()}
+                    className={cn(
+                        "flex flex-col gap-1 px-3 py-2 rounded-md transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                        className
+                    )}
+                    {...props}
+                >
+                    <div className="text-sm font-medium leading-none">{title}</div>
+                </Link>
+            </SidebarMenuSubItem>
+        );
+    });
+    EventMobileItem.displayName = "EventItem";
+
+
+
     return (
 
         <header className="h-16 text-[15px] fixed z-20 inset-0 bg-white">
@@ -195,9 +370,9 @@ const Header = ({ }) => {
                     </Menubar>
                 </div>
 
-                <SidebarTrigger className={"lg:hidden ml-auto"} />
+                <SidebarTrigger className={"lg:hidden ml-auto"}/>
                 <div className={"lg:hidden"}>
-                    <Sidebar side={"right"} collapsible={"offcanvas"} variant={"sidebar"}>
+                    <Sidebar side={"right"} collapsible={"offcanvas"} variant={"sidebar"} >
                         <SidebarContent>
                             <SidebarGroup>
                                 <SidebarGroupContent>
@@ -269,167 +444,4 @@ const Header = ({ }) => {
     )
 }
 export default Header
-
-const MoreMobileItem = forwardRef<
-    React.ElementRef<"a">,
-    React.ComponentPropsWithoutRef<"a"> & { src?: string }
->(({ className, title, src, ...props }, ref) => {
-    return (
-        <SidebarMenuSubItem>
-            <a
-                ref={ref}
-                className={cn(
-                    "flex items-center gap-3 select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-                    className
-                )}
-                {...props}
-            >
-                {/* Icon */}
-                {src && (
-                    <Image
-                        src={src}
-                        alt={`${title} icon`}
-                        width={24}
-                        height={24}
-                        className="w-6 h-6 flex-shrink-0"
-                    />
-                )}
-
-                {/* Text Content */}
-                <div className="flex flex-col justify-center">
-                    <div className="text-sm font-medium leading-none">{title}</div>
-
-                </div>
-            </a>
-        </SidebarMenuSubItem>
-    );
-});
-
-MoreMobileItem.displayName = "MoreItem";
-
-
-const MoreItem = forwardRef<
-    React.ElementRef<"a">,
-    React.ComponentPropsWithoutRef<"a"> & { src?: string }
->(({ className, title, src, children, ...props }, ref) => {
-    return (
-        <MenubarItem asChild>
-            <a
-                ref={ref}
-                className={cn(
-                    "flex items-center gap-3 select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-                    className
-                )}
-                {...props}
-            >
-                {/* Icon */}
-                {src && (
-                    <Image
-                        src={src}
-                        alt={`${title} icon`}
-                        width={24}
-                        height={24}
-                        className="w-6 h-6 flex-shrink-0"
-                    />
-                )}
-
-                {/* Text Content */}
-                <div className="flex flex-col justify-center">
-                    <div className="text-sm font-medium leading-none">{title}</div>
-                    <p className="text-sm leading-snug text-muted-foreground">
-                        {children}
-                    </p>
-                </div>
-            </a>
-        </MenubarItem>
-    );
-});
-MoreItem.displayName = "MoreItem";
-
-
-const EventItem = forwardRef<
-    React.ElementRef<"a">,
-    React.ComponentPropsWithoutRef<"a"> & {
-        title: string;
-        href?: string;
-        subEvents?: { title: string; href: string }[];
-    }
->(({ className, title, href, subEvents, ...props }, ref) => {
-    return subEvents && subEvents.length > 0 ? (
-        <MenubarSub>
-            <MenubarSubTrigger className={"justify-center"}>{title}</MenubarSubTrigger>
-            <MenubarSubContent>
-                {subEvents.map((subEvent) => (
-                    <MenubarItem key={subEvent.title} asChild>
-                        <Link href={subEvent.href}>{subEvent.title}</Link>
-                    </MenubarItem>
-                ))}
-            </MenubarSubContent>
-        </MenubarSub>
-    ) : (
-        <MenubarItem asChild>
-            <Link
-                ref={ref}
-                href={href || "#"}
-                className={cn(
-                    "w-full flex justify-end gap-1 px-3 py-2 rounded-md transition-colors",
-                    "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-                    className
-                )}
-                {...props}
-            >
-                <div className="text-sm font-medium leading-none text-right">{title}</div>
-            </Link>
-        </MenubarItem>
-    );
-});
-EventItem.displayName = "EventItem";
-
-const EventMobileItem = forwardRef<
-    React.ElementRef<"a">,
-    React.ComponentPropsWithoutRef<"a"> & {
-        title: string;
-        href?: string;
-        subEvents?: { title: string; href: string }[];
-    }
->(({ className, title, href, subEvents, ...props }, ref) => {
-    return subEvents && subEvents.length > 0 ? (
-        <SidebarMenu>
-            <Collapsible defaultOpen className="group/collapsible">
-                <SidebarMenuItem>
-                    <CollapsibleTrigger asChild>
-                        <SidebarMenuButton>
-                            {title}
-                            <ChevronsUpDown className="h-4 w-4" />
-                        </SidebarMenuButton>
-                    </CollapsibleTrigger>
-                    <CollapsibleContent>
-                        <SidebarMenuSub>
-                            {subEvents.map((subEvent) => (
-                                <SidebarMenuSubItem key={subEvent.title}>
-                                    <Link href={subEvent.href}>{subEvent.title}</Link>
-                                </SidebarMenuSubItem>
-                            ))}
-                        </SidebarMenuSub>
-                    </CollapsibleContent>
-                </SidebarMenuItem>
-            </Collapsible>
-        </SidebarMenu>
-    ) : (
-        <SidebarMenuSubItem>
-            <Link
-                ref={ref}
-                href={href || "#"}
-                className={cn(
-                    "flex flex-col gap-1 px-3 py-2 rounded-md transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-                    className
-                )}
-                {...props}
-            >
-                <div className="text-sm font-medium leading-none">{title}</div>
-            </Link>
-        </SidebarMenuSubItem>
-    );
-});
-EventMobileItem.displayName = "EventItem";
 

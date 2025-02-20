@@ -4,7 +4,10 @@ import Footer from "./Footer"
 import Header from "./Header"
 import { SidebarProvider } from "@/components/ui/sidebar";
 
+
 const HeaderFooter: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+
+
     return (
         <>
 
