@@ -95,56 +95,56 @@ const eventsContents: EventContent[] = [
 const moreContents: { title: string; href: string; description: string; src: string }[] = [
     {
         title: "What is KitaHack",
-        href: "#kitahack-info",
+        href: "/#kitahack-info",
         description:
             "Get a better understanding of KitaHack 2025",
         src: "images/question-mark-circle.svg"
     },
     {
         title: "What is Sustainable Development Goals?",
-        href: "#sdg-info",
+        href: "/#sdg-info",
         description:
             "Join to preserve the environment!",
         src: "images/earth.svg"
     },
     {
         title: "How to join",
-        href: "#how-to-join",
+        href: "/#how-to-join",
         description:
             "A conversation between two friends",
         src: "images/click.svg"
     },
     {
         title: "Team Formation",
-        href: "#team-formation",
+        href: "/#team-formation",
         description:
             "Stronger together",
         src: "images/team-fill.svg"
     },
     {
         title: "Judging Criteria",
-        href: "#judging-criteria",
+        href: "/#judging-criteria",
         description:
             "Take note",
         src: "images/tick-circle-outline.svg"
     },
     {
         title: "Submission Criteria",
-        href: "#submission-criteria",
+        href: "/#submission-criteria",
         description:
             "You can only submit your project once",
         src: "images/email.svg"
     },
     {
         title: "Mentors",
-        href: "#mentor",
+        href: "/#mentor",
         description:
             "Remember these people",
         src: "images/person.svg"
     },
     {
         title: "Chapters",
-        href: "#chapter",
+        href: "/#chapter",
         description:
             "Organise with love",
         src: "images/degree-hat.svg"
@@ -161,12 +161,12 @@ const Header = ({ }) => {
     } = useSidebar()
 
     const MoreMobileItem = forwardRef<
-        React.ElementRef<"a">,
-        React.ComponentPropsWithoutRef<"a"> & { src?: string }
+        React.ElementRef<typeof Link>,
+        React.ComponentPropsWithoutRef<typeof Link> & { src?: string }
     >(({ className, title, src, ...props }, ref) => {
         return (
             <SidebarMenuSubItem>
-                <a
+                <Link
                     ref={ref}
                     className={cn(
                         "flex items-center gap-3 select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
@@ -188,23 +188,20 @@ const Header = ({ }) => {
                     {/* Text Content */}
                     <div className="flex flex-col justify-center">
                         <div className="text-sm font-medium leading-none">{title}</div>
-
                     </div>
-                </a>
+                </Link>
             </SidebarMenuSubItem>
         );
     });
-
-    MoreMobileItem.displayName = "MoreItem";
-
+    MoreMobileItem.displayName = "MoreMobileItem";
 
     const MoreItem = forwardRef<
-        React.ElementRef<"a">,
-        React.ComponentPropsWithoutRef<"a"> & { src?: string }
+        React.ElementRef<typeof Link>,
+        React.ComponentPropsWithoutRef<typeof Link> & { src?: string }
     >(({ className, title, src, children, ...props }, ref) => {
         return (
             <MenubarItem asChild>
-                <a
+                <Link
                     ref={ref}
                     className={cn(
                         "flex items-center gap-3 select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
@@ -226,16 +223,13 @@ const Header = ({ }) => {
                     {/* Text Content */}
                     <div className="flex flex-col justify-center">
                         <div className="text-sm font-medium leading-none">{title}</div>
-                        <p className="text-sm leading-snug text-muted-foreground">
-                            {children}
-                        </p>
+                        <p className="text-sm leading-snug text-muted-foreground">{children}</p>
                     </div>
-                </a>
+                </Link>
             </MenubarItem>
         );
     });
     MoreItem.displayName = "MoreItem";
-
 
     const EventItem = forwardRef<
         React.ElementRef<"a">,
@@ -370,7 +364,7 @@ const Header = ({ }) => {
                     </Menubar>
                 </div>
 
-                <SidebarTrigger className={"lg:hidden ml-auto"}/>
+                <SidebarTrigger className={"lg:hidden ml-auto"} />
                 <div className={"lg:hidden"}>
                     <Sidebar side={"right"} collapsible={"offcanvas"} variant={"sidebar"} >
                         <SidebarContent>
