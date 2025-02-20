@@ -35,6 +35,8 @@ import {
 import { cn } from "@/lib/utils";
 import { ChevronsUpDown } from "lucide-react"
 import { forwardRef } from "react";
+import Link from "next/link";
+
 
 
 
@@ -51,6 +53,7 @@ type EventContent = {
 
 
 const eventsContents: EventContent[] = [
+
     {
         title: "Demo Day",
         href: "",
@@ -72,13 +75,13 @@ const eventsContents: EventContent[] = [
         subEvents: [
             {
                 title: "Sunway React & Firebase Workshop Series",
-                href: "#sub-event-1",
+                href: "/ReactAndFirebaseWorkshop",
             },
             {
                 title: "KDU Android Workshop",
                 href: "#sub-event-2",
             },
-        ], // You can still define subEvents here
+        ], 
     }
 ];
 
@@ -153,7 +156,9 @@ const Header = ({ }) => {
         <header className="h-16 text-[15px] fixed z-20 inset-0 bg-white">
             <nav className="mx-6 lg:mx-40 flex lg:justify-between items-center h-full">
                 <div className="flex items-center">
-                    <Image src="/images/kitahack2024.png" alt="" width={56} height={56} className="h-14 w-auto" />
+                    <Link href={"/"}>
+                        <Image src="/images/kitahack2024.png" alt="" width={56} height={56} className="h-14 w-auto cursor-pointer" />
+                    </Link>
                 </div>
 
 
@@ -347,7 +352,7 @@ const EventItem = forwardRef<
     React.ComponentPropsWithoutRef<"a"> & {
         title: string;
         href?: string;
-        subEvents?: { title: string; href: string }[]; // Allow undefined
+        subEvents?: { title: string; href: string }[];
     }
 >(({ className, title, href, subEvents, ...props }, ref) => {
     return subEvents && subEvents.length > 0 ? (
@@ -356,16 +361,16 @@ const EventItem = forwardRef<
             <MenubarSubContent>
                 {subEvents.map((subEvent) => (
                     <MenubarItem key={subEvent.title} asChild>
-                        <a href={subEvent.href}>{subEvent.title}</a>
+                        <Link href={subEvent.href}>{subEvent.title}</Link>
                     </MenubarItem>
                 ))}
             </MenubarSubContent>
         </MenubarSub>
     ) : (
         <MenubarItem asChild>
-            <a
+            <Link
                 ref={ref}
-                href={href}
+                href={href || "#"}
                 className={cn(
                     "w-full flex justify-end gap-1 px-3 py-2 rounded-md transition-colors",
                     "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
@@ -373,9 +378,8 @@ const EventItem = forwardRef<
                 )}
                 {...props}
             >
-              
                 <div className="text-sm font-medium leading-none text-right">{title}</div>
-            </a>
+            </Link>
         </MenubarItem>
     );
 });
@@ -386,30 +390,26 @@ const EventMobileItem = forwardRef<
     React.ComponentPropsWithoutRef<"a"> & {
         title: string;
         href?: string;
-        subEvents?: { title: string; href: string }[]; // Allow undefined
+        subEvents?: { title: string; href: string }[];
     }
 >(({ className, title, href, subEvents, ...props }, ref) => {
     return subEvents && subEvents.length > 0 ? (
         <SidebarMenu>
-
             <Collapsible defaultOpen className="group/collapsible">
                 <SidebarMenuItem>
                     <CollapsibleTrigger asChild>
                         <SidebarMenuButton>
-                            Workshops
-
+                            {title}
                             <ChevronsUpDown className="h-4 w-4" />
-
                         </SidebarMenuButton>
                     </CollapsibleTrigger>
                     <CollapsibleContent>
                         <SidebarMenuSub>
                             {subEvents.map((subEvent) => (
                                 <SidebarMenuSubItem key={subEvent.title}>
-                                    <a href={subEvent.href}>{subEvent.title}</a>
+                                    <Link href={subEvent.href}>{subEvent.title}</Link>
                                 </SidebarMenuSubItem>
                             ))}
-
                         </SidebarMenuSub>
                     </CollapsibleContent>
                 </SidebarMenuItem>
@@ -417,9 +417,9 @@ const EventMobileItem = forwardRef<
         </SidebarMenu>
     ) : (
         <SidebarMenuSubItem>
-            <a
+            <Link
                 ref={ref}
-                href={href}
+                href={href || "#"}
                 className={cn(
                     "flex flex-col gap-1 px-3 py-2 rounded-md transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
                     className
@@ -427,7 +427,7 @@ const EventMobileItem = forwardRef<
                 {...props}
             >
                 <div className="text-sm font-medium leading-none">{title}</div>
-            </a>
+            </Link>
         </SidebarMenuSubItem>
     );
 });
