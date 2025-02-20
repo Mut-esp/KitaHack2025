@@ -168,6 +168,7 @@ const Header = ({ }) => {
             <SidebarMenuSubItem>
                 <Link
                     ref={ref}
+                    onClick={() => toggleSidebar()}
                     className={cn(
                         "flex items-center gap-3 select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
                         className
@@ -255,6 +256,7 @@ const Header = ({ }) => {
                 <Link
                     ref={ref}
                     href={href || "#"}
+                    onClick={() => toggleSidebar()}
                     className={cn(
                         "w-full flex justify-end gap-1 px-3 py-2 rounded-md transition-colors",
                         "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
