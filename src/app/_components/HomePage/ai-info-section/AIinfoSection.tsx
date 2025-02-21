@@ -21,8 +21,8 @@ const AIinfoSection = () => {
                     <div className={"space-y-10 flex flex-col items-center"}>
                         <Image src={"/images/ai-studio-icon.png"} alt="ai-studio-icon" width={250} height={250} className="shadow-2xl shadow-blue-400 dark:shadow-gray-400 p-4 rounded-lg" />
                         <div className={"space-y-4"}>
-                            <h1 className={"font-black text-3xl lg:text-4xl font-[GoogleSans-Bold] text-gray-700 text-center"}>Google <br />Cloud AI</h1>
-                            <p className={"text-center text-xl text-gray-800"}> A collection of AI-powered APIs for vision, speech, translation, and text processing.</p>
+                            <h1 className={"font-black text-3xl lg:text-4xl font-[GoogleSans-Bold] text-gray-700 text-center"}>Google <br />AI Studio</h1>
+                            <p className={"text-center text-xl text-gray-800"}> A web-based platform for quickly prototyping, testing, and deploying AI models using Google's advanced technologies.</p>
                         </div>
                     </div>
                     <div className={"space-y-10 flex flex-col items-center"}>
