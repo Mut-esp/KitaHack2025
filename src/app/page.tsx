@@ -8,6 +8,8 @@ import JudgingCriteriaSection from "./_components/HomePage/judging-criteria-sect
 import SubmissionCriteriaSection from "./_components/HomePage/submission-criteria-section/SubmissionCriteriaSection";
 // import MentorsSection from "./_components/HomePage/mentor-section/MentorSection";
 import FAQsSection from "./_components/HomePage/faqs-section/FAQsSection";
+import AIinfoSection from "./_components/HomePage/ai-info-section/AIinfoSection";
+
 
 export default function Home() {
   return (
@@ -20,6 +22,8 @@ export default function Home() {
       <KitaHackInfoSection/>
 
       <SdgInfoSection/>
+
+      <AIinfoSection/>
 
       {/* <HowToJoinSection/> */} 
 
