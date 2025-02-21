@@ -17,13 +17,13 @@ const SdgInfoSection = () => {
 
           <ul className="flex flex-col gap-2 mt-10 lg:gap-4">
             <li className="text-justify lg:text-left">
-              In 2015, the United Nations created 17 Sustainable Development Goals and aimed to achieve them by 2030. All 193 United Nations Member States agreed on these 17 goals to end poverty, ensure prosperity, and protect the planet.
+              In 2015, the United Nations established 17 Sustainable Development Goals (SDGs) to be achieved by 2030, aiming to end poverty, ensure prosperity, and protect the planet. These goals were agreed upon by all 193 United Nations Member States as a global blueprint for a better future.
             </li>
             <li className="text-justify lg:text-left">
-              For KitaHack and the 2023 Solution Challenge, we want to encourage participants to create projects that contribute to solving one or more of the 17 SDGs using Google technologies. We believe that by working towards these goals, we can make a positive impact on the world and create a more sustainable future for all.
+              For KitaHack and the 2025 Solution Challenge, we encourage participants to develop projects that contribute to one or more of the 17 SDGs using <strong>Google's AI technologies</strong>, such as <strong>Gemini AI, Vertex AI, and Google Cloud AI</strong>. By leveraging these powerful tools, participants can build innovative solutions that tackle global challenges, drive sustainability, and create meaningful change.
             </li>
             <li className="text-justify lg:text-left">
-              You can learn more about the SDGs and the specific targets for each goal on the{" "}
+              You can learn more about the SDGs and their specific targets on the{" "}
               <a
                 href="https://sdgs.un.org/goals"
                 target="_blank"
@@ -31,8 +31,7 @@ const SdgInfoSection = () => {
                 rel="noreferrer"
               >
                 United Nations website
-              </a>
-              . Additionally, you can visit{" "}
+              </a>. Additionally, explore{" "}
               <a
                 href="https://developers.google.com/community/gdsc-solution-challenge/UN-goals"
                 target="_blank"
@@ -40,10 +39,10 @@ const SdgInfoSection = () => {
                 rel="noreferrer"
               >
                 Google's SDG website
-              </a>{" "}
-              to learn about the company's efforts to support and promote the SDGs.
+              </a> to see how Google's AI technologies are being used to support these global goals.
             </li>
           </ul>
+
         </section>
 
         {/* Video Section */}
