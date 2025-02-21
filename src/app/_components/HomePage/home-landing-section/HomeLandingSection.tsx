@@ -22,18 +22,19 @@ const HomeLandingSection = () => {
                                 </strong>
                             </p>
 
-                            <a id="hero_button" href="https://forms.gle/YCZZj5EQg5vS61y78" target="_blank" rel="noopener noreferrer" className="gradient-border-button h-14 btn border-white relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
-                                <span className="font-[GoogleSans-Bold] font-bold relative flex px-5 py-3.5 transition-all ease-in duration-75 dark:text-gray-400 dark:bg-[#2A303C] rounded-md group-hover:bg-opacity-0 dark:hover:text-white">
+                            <a id="" href="https://forms.gle/YCZZj5EQg5vS61y78" target="_blank" rel="noopener noreferrer" className="gradient-border-button h-14 btn border-white relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium rounded-lg bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
+                                <span className="font-[GoogleSans-Bold] font-bold relative flex px-5 py-3.5 transition-all ease-in duration-75 ">
                                     Register Now!
                                 </span>
                             </a>
+
                         </div>
                         <div className="mb-12 lg:mb-0">
                             <Image
                                 src="/images/gsc_home_hero_logo.png"
                                 width={500} // Adjust width based on actual image size
                                 height={400} // Adjust height based on actual image size
-                                className="w-full rounded-lg shadow-2xl shadow-gray-900 dark:shadow-gray-400"
+                                className="w-full rounded-lg shadow-2xl shadow-blue-400 dark:shadow-gray-400"
                                 alt="GSC Home Hero Logo"
                                 priority // Optimizes loading for LCP
                             />
