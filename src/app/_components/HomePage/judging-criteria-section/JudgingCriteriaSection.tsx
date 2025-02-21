@@ -11,7 +11,7 @@ const JudgingCriteriaSection = () => {
                     Judging Criteria
                 </p>
 
-                <h3 className="mt-10 mb-2 text-2xl font-bold font-[GoogleSans-Bold] text-center text-gray-600 md:text-4xl dark:text-white">
+                {/* <h3 className="mt-10 mb-2 text-2xl font-bold font-[GoogleSans-Bold] text-center text-gray-600 md:text-4xl dark:text-white">
                     Number of rounds
                 </h3>
                 <div className="flex flex-col text-white bg-blue-500 shadow-lg stats-container dark:bg-gray-700 md:flex-row">
@@ -36,7 +36,7 @@ const JudgingCriteriaSection = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 <h3 className="mt-10 text-xl font-bold font-[GoogleSans-Bold] text-center text-gray-600 md:text-4xl dark:text-white">
                     Impact

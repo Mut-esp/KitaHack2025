@@ -2,11 +2,11 @@ import HomeLandingSection from "./_components/HomePage/home-landing-section/Home
 import TimeTickingSection from "./_components/HomePage/time-ticking-section/TimeTickingSection";
 import KitaHackInfoSection from "./_components/HomePage/kitaHack-info-section/KitaHackInfoSection";
 import SdgInfoSection from "./_components/HomePage/sdg-info-section/SdgInfoSection";
-import HowToJoinSection from "./_components/HomePage/howtojoin-section/HowToJoinSection";
+// import HowToJoinSection from "./_components/HomePage/howtojoin-section/HowToJoinSection";
 import TeamFormationSection from "./_components/HomePage/team-formation-section/TeamFormationSection";
 import JudgingCriteriaSection from "./_components/HomePage/judging-criteria-section/JudgingCriteriaSection";
 import SubmissionCriteriaSection from "./_components/HomePage/submission-criteria-section/SubmissionCriteriaSection";
-import MentorsSection from "./_components/HomePage/mentor-section/MentorSection";
+// import MentorsSection from "./_components/HomePage/mentor-section/MentorSection";
 import FAQsSection from "./_components/HomePage/faqs-section/FAQsSection";
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
 
       <SdgInfoSection/>
 
-      <HowToJoinSection/>
+      {/* <HowToJoinSection/> */} 
 
       <TeamFormationSection/>
 
@@ -29,7 +29,7 @@ export default function Home() {
 
       <SubmissionCriteriaSection/>
 
-      <MentorsSection/>
+      {/* <MentorsSection/> */}
 
       <FAQsSection/>
 
