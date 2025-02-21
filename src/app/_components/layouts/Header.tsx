@@ -323,7 +323,7 @@ const Header = ({ }) => {
             <nav className="mx-6 lg:mx-40 flex lg:justify-between items-center h-full">
                 <div className="flex items-center">
                     <Link href={"/"}>
-                        <Image src="/images/kitahack2024.png" alt="" width={56} height={56} className="h-14 w-auto cursor-pointer" />
+                        <Image src="/images/KitaHack2025-logo.svg" alt="" width={200} height={100} className="h-100 w-[150] cursor-pointer" />
                     </Link>
                 </div>
 
