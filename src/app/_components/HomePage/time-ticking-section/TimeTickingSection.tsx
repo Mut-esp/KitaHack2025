@@ -46,7 +46,7 @@ const TimeTickingSection = () => {
                     Time ticking ⏰
                 </h2>
                 <p className="mt-2 text-3xl text-center font-[GoogleSans-Bold] font-bold">
-                    Days until Demo-day
+                Prototype Submission
                 </p>
 
                 <div className={"flex flex-col text-white text-center mt-4 gap-5 sm:flex-row sm:justify-center"}>
@@ -66,9 +66,19 @@ const TimeTickingSection = () => {
                         <span className={"text-6xl"}>{timeLeft.seconds}</span>  {/* Corrected */}
                         <span className={"text-3xl"}>seconds</span>
                     </div>
-
-
-
+                </div>
+                <div className={"flex flex-col text-white text-center mt-4 gap-5 sm:flex-row sm:justify-center"}>
+                    {/* <a id="" href="" target="_blank" rel="noopener noreferrer" className="gradient-border-button h-14 btn border-white relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium rounded-lg bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
+                        <span className="font-[GoogleSans-Bold] font-bold relative flex px-5 py-3.5 transition-all ease-in duration-75 ">
+                            Submit
+                        </span>
+                    </a> */} {/* Commented for actual button: can replace submission link in future on href*/}
+                    <button 
+                        className="w-32 h-14 border-white relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium rounded-lg bg-gray-200 text-gray-500" disabled>
+                        <span className="font-[GoogleSans-Bold] font-bold relative flex px-5 py-3.5 transition-all ease-in duration-75 ">
+                            Submit
+                        </span>
+                    </button>
                 </div>
             </div>
         </section>
