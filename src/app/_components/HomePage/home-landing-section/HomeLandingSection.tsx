@@ -14,11 +14,11 @@ const HomeLandingSection = () => {
                             <p className="max-w-2xl mb-6 font-normal text-gray-700 dark:text-gray-400 lg:mb-8">
                                 KitaHack is a 2-month event featuring <strong className="font-[GoogleSans-Bold]">
                                     talks, events, and a hackathon
-                                </strong> organised by Google Developer Group On Campus (GDGoC Malaysia).
+                                </strong> organised by Google Developer Group On Campus Malaysia (GDGoC Malaysia).
                             </p>
                             <p className="max-w-2xl mb-6 font-normal text-gray-700 dark:text-gray-400 lg:mb-8">
                                 The event duration is <strong className="font-[GoogleSans-Bold]">
-                                    22nd February 2025 - 27th April 2025
+                                    22nd February 2025 - 4th May 2025
                                 </strong>
                             </p>
 
