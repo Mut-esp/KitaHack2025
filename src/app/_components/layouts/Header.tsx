@@ -60,43 +60,43 @@ type EventContent = {
 const eventsContents: EventContent[] = [
 
     {
-        title: "No Events Yet",
+        title: "Coming Soon",
         href: "",
-        subEvents: undefined, // Set subEvents to undefined instead of null
+        subEvents: undefined, // Set subEvents to undefined 
     }, // use this for no events
-    {
-        title: "Demo Day",
-        href: "",
-        subEvents: undefined, // Set subEvents to undefined instead of null
-    },
-    {
-        title: "Google Solution Challenge 2025 Info Session",
-        href: "",
-        subEvents: undefined, // Set subEvents to undefined instead of null
-    },
-    {
-        title: "2025 Solution Challenge Kickoff Event",
-        href: "",
-        subEvents: undefined, // Set subEvents to undefined instead of null
-    },
-    {
-        title: "Workshops",
-        href: "",
-        subEvents: [
-            {
-                title: "No Workshops Yet",
-                href: "",
-            }, // use this for no workshops
-            {
-                title: "Sunway React & Firebase Workshop Series",
-                href: "/ReactAndFirebaseWorkshop",
-            },
-            {
-                title: "KDU Android Workshop",
-                href: "#sub-event-2",
-            },
-        ],
-    }
+    // {
+    //     title: "Demo Day",
+    //     href: "",
+    //     subEvents: undefined, // Set subEvents to undefined instead of null
+    // },
+    // {
+    //     title: "Google Solution Challenge 2025 Info Session",
+    //     href: "",
+    //     subEvents: undefined, // Set subEvents to undefined instead of null
+    // },
+    // {
+    //     title: "2025 Solution Challenge Kickoff Event",
+    //     href: "",
+    //     subEvents: undefined, // Set subEvents to undefined instead of null
+    // },
+    // {
+    //     title: "Workshops",
+    //     href: "",
+    //     subEvents: [
+    //         {
+    //             title: "No Workshops Yet",
+    //             href: "",
+    //         }, // use this for no workshops
+    //         {
+    //             title: "Sunway React & Firebase Workshop Series",
+    //             href: "/ReactAndFirebaseWorkshop",
+    //         },
+    //         {
+    //             title: "KDU Android Workshop",
+    //             href: "#sub-event-2",
+    //         },
+    //     ],
+    // }
 ];
 
 
@@ -144,20 +144,6 @@ const moreContents: { title: string; href: string; description: string; src: str
             "You can only submit your project once",
         src: "images/email.svg"
     },
-    {
-        title: "Mentors",
-        href: "/#mentor",
-        description:
-            "Remember these people",
-        src: "images/person.svg"
-    },
-    {
-        title: "Chapters",
-        href: "/#chapter",
-        description:
-            "Organise with love",
-        src: "images/degree-hat.svg"
-    }
 ]
 
 
@@ -357,7 +343,7 @@ const Header = ({ }) => {
                         </MenubarMenu>
 
                         <MenubarMenu>
-                            <MenubarTrigger>More</MenubarTrigger>
+                            <MenubarTrigger>Details</MenubarTrigger>
                             <MenubarContent align="end" className={"max-h-64 overflow-y-auto hidden lg:block"}>
                                 {moreContents.map((moreContent) => (
                                     <MoreItem
