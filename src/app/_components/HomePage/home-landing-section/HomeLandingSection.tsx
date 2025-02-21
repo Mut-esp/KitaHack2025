@@ -9,16 +9,16 @@ const HomeLandingSection = () => {
                     <div className="grid items-center gap-12 lg:grid-cols-2">
                         <div className="mt-12 lg:mt-0">
                             <h1 id="hero_title" className="font-[GoogleSans-Bold] mb-6 text-5xl font-bold tracking-tight text-transparent gradient-text md:text-6xl xl:text-6xl dark:text-white dark:bg-none">
-                                GDGoc KitaHack 2025
+                                GDGoC KitaHack 2025
                             </h1>
                             <p className="max-w-2xl mb-6 font-normal text-gray-700 dark:text-gray-400 lg:mb-8">
                                 KitaHack is a 2-month event featuring <strong className="font-[GoogleSans-Bold]">
                                     talks, events, and a hackathon
-                                </strong> organised by Google Developer Student Clubs Malaysia (GDSC Malaysia).
+                                </strong> organised by Google Developer Group On Campus (GDGoC Malaysia).
                             </p>
                             <p className="max-w-2xl mb-6 font-normal text-gray-700 dark:text-gray-400 lg:mb-8">
                                 The event duration is <strong className="font-[GoogleSans-Bold]">
-                                    3rd Dec 2023 - 28th Jan 2024
+                                    22nd February 2025 - 27th April 2025
                                 </strong>
                             </p>
 
