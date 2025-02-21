@@ -4,9 +4,13 @@ import Image from "next/image"
 
 const AIinfoSection = () => {
     return (
-        <section className={"container px-6 mx-auto"}>
+        <section id="ai-info" className={"container px-6 mx-auto"}>
             <div className={"flex flex-col items-center justify-center md:px-12 lg:text-left xl:px-52 gap-10"}>
                 <div className={"text-center space-y-5"}>
+                    <h2 className="font-semibold leading-7 lg:text-center text-blue-500">
+                        Discover AI Technologies.
+                    </h2>
+
                     <h1 className={"font-black text-3xl lg:text-4xl font-[GoogleSans-Bold] text-gray-700"}>What is AI?</h1>
                     <p className={"text-justify"}>
                         Artificial Intelligence (AI) refers to the simulation of human intelligence in machines, enabling them to learn, reason, and make decisions. AI is revolutionizing industries by automating tasks, optimizing processes, and providing data-driven insights to solve complex problems.

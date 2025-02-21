@@ -117,11 +117,11 @@ const moreContents: { title: string; href: string; description: string; src: str
         src: "images/earth.svg"
     },
     {
-        title: "How to join",
-        href: "/#how-to-join",
+        title: "What is AI?",
+        href: "/#ai-info",
         description:
-            "A conversation between two friends",
-        src: "images/click.svg"
+            "Discover AI Technologies",
+        src: "images/artificial-intelligence-04.svg"
     },
     {
         title: "Team Formation",
