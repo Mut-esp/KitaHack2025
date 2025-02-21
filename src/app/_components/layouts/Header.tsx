@@ -137,13 +137,13 @@ const moreContents: { title: string; href: string; description: string; src: str
             "Take note",
         src: "images/tick-circle-outline.svg"
     },
-    {
-        title: "Submission Criteria",
-        href: "/#submission-criteria",
-        description:
-            "You can only submit your project once",
-        src: "images/email.svg"
-    },
+    // {
+    //     title: "Submission Criteria",
+    //     href: "/#submission-criteria",
+    //     description:
+    //         "You can only submit your project once",
+    //     src: "images/email.svg"
+    // },
 ]
 
 
