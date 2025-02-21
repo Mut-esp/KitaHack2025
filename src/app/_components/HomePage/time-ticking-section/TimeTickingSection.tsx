@@ -36,7 +36,7 @@ const TimeTickingSection = () => {
             return () => clearInterval(interval); // Cleanup function to stop interval
         };
 
-        startCountdown("Feb 22, 2025 12:00:00");
+        startCountdown("April 6, 2025 11:59:00");
     }, []);
 
     return (
