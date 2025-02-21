@@ -44,78 +44,45 @@ const JudgingCriteriaSection = () => {
                 <section className="mt-8 text-justify">
                     <ol className="ml-5 list-decimal">
                         <li className="mt-4 font-normal text-justify text-gray-700 dark:text-gray-400">
-                            Problem Statement & SDG Alignment {/* <b className="font-bold font-[GoogleSans-Bold]">clear challenge</b> using their problem
-                            statement?*/} 🚀
-                            <ol className="ml-5 list-[upper-roman]">
+                            <b className="font-bold font-[GoogleSans-Bold]">Problem Statement & SDG Alignment 🚀</b>
+                            <ol className="ml-5 list-none mt-2">
                                 <li>
-                                    Does the team establish a <b className="font-bold font-[GoogleSans-Bold]">clear challenge</b> using their problem statement?
-                                </li>
-                                <li>
-                                    Do they explain clearly which <b className="font-bold font-[GoogleSans-Bold]">(Selected SDG)</b> they chose for their solution and why?
-                                </li>
-                                <li>
-                                    Does the team clearly demonstrate how <b className="font-bold font-[GoogleSans-Bold]">AI or other technologies</b> effectively address the identified issue?
+                                    The team must clearly define a problem statement, justify its alignment with a Sustainable Development Goal (SDG) based on real-world needs, and demonstrate how AI or other technologies can effectively address the issue.
                                 </li>
                             </ol>
                         </li>
                         <li className="mt-4 font-normal text-justify text-gray-700 dark:text-gray-400">
-                            User Feedback & Iteration 🚀
-                            {/* <b className="font-bold font-[GoogleSans-Bold]">(Selected SDG)</b> they chose for their
-                            solution and why?*/}
-                            <ol className="ml-5 list-[upper-roman]">
+                            <b className="font-bold font-[GoogleSans-Bold]">User Feedback & Iteration 🚀</b>
+                            <ol className="ml-5 list-none mt-2">
                                 <li>
-                                    Does the team clearly describe three <b className="font-bold font-[GoogleSans-Bold]">feedback points they received from real users</b> and the steps they took to test them?
-                                </li>
-                                <li>
-                                    Is there evidence of what the team learned and <b className="font-bold font-[GoogleSans-Bold]">how the solution was iterated upon</b> based on user feedback?
+                                    The team must gather real user feedback, identify at least three key insights, and provide evidence of how they iterated on their solution based on user input.
                                 </li>
                             </ol>
                         </li>
                         <li className="mt-4 font-normal text-justify text-gray-700 dark:text-gray-400">
-                            Success Metrics & Scalability{/* Feedback from users, testing &amp; iteration*/}🚀
-                            <ol className="ml-5 list-[upper-roman]">
+                            <b className="font-bold font-[GoogleSans-Bold]">Success Metrics & Scalability 🚀</b>
+                            <ol className="ml-5 list-none mt-2">
                                 <li>
-                                    Does the <b className="font-bold font-[GoogleSans-Bold]">solution address the challenge (and problem statement)</b> identified by the team?
-                                </li>
-                                <li>
-                                    Does the team adequately <b className="font-bold font-[GoogleSans-Bold]">describe the success of their solution</b> using metrics, goals, and outcomes, or through cause and effect?
+                                    The team must define measurable success metrics to demonstrate impact and present a clear roadmap for scaling their solution.
                                 </li>
                             </ol>
                         </li>
                         <li className="mt-4 font-normal text-justify text-gray-700 dark:text-gray-400">
-                            AI Integration [Google AI Studio / Gemini / Vertex AI] 🚀
-                            {/* Does the
-                            <b className="font-bold font-[GoogleSans-Bold]">solution address the challenge (and problem statement)</b> identified
-                            by the team? Does the team adequately
-                            <b className="font-bold font-[GoogleSans-Bold]">describe the success of their solution</b> using metrics, goals, and
-                            outcomes, or through cause and effect?<b className="font-bold font-[GoogleSans-Bold]"> 🚀 </b> */}
-                            <ol className="ml-5 list-[upper-roman]">
+                            <b className="font-bold font-[GoogleSans-Bold]">AI Integration [Google AI Studio / Gemini / Vertex AI] 🚀</b>
+                            <ol className="ml-5 list-none mt-2">
                                 <li>
-                                    Does the team meaningfully <b className="font-bold font-[GoogleSans-Bold]">integrate AI (Google AI Studio, Gemini, Vertex AI, etc.)</b> into their solution?
-                                </li>
-                                <li>
-                                    Does the team provide a clear <b className="font-bold font-[GoogleSans-Bold]">justification for their choice of AI technology and explain how its integration</b> enhances the functionality or impact of their solution?
+                                    The team must meaningfully integrate AI (Google AI Studio, Gemini, Vertex AI, etc.), justify their choice, and explain how it enhances their solution.
                                 </li>
                             </ol>
                         </li>
                         <li className="mt-4 font-normal text-justify text-gray-700 dark:text-gray-400">
-                            Technology Innovation 🚀
-                            <ol className="ml-5 list-[upper-roman]">
+                            <b className="font-bold font-[GoogleSans-Bold]">Technology Innovation 🚀</b>
+                            <ol className="ml-5 list-none mt-2">
                                 <li>
-                                    Does the team demonstrate <b className="font-bold font-[GoogleSans-Bold]">creativity in addressing SDG-related</b> world issues?
-                                </li>
-                                <li>
-                                    Do they  <b className="font-bold font-[GoogleSans-Bold]">effectively utilize technology</b> to solve real-world problems?
+                                    The team must demonstrate creativity in addressing SDG-related world issues and effectively utilize technology to solve real-world problems.
                                 </li>
                             </ol>
                         </li>
-                        {/* <b className="font-bold font-[GoogleSans-Bold]">
-                            <li className="px-2 mt-4 font-normal text-justify text-gray-700 dark:text-gray-400">
-                                Is there evidence of next steps? Does the team display a
-                                <b className="font-bold font-[GoogleSans-Bold]">clear plan for future extension to a larger audience</b> if they
-                                were to continue?<b className="font-bold font-[GoogleSans-Bold]">🚀</b>
-                            </li>
-                        </b> */}
                     </ol>
                     <b className="font-bold font-[GoogleSans-Bold]"><b className="font-bold font-[GoogleSans-Bold]"><b className="font-bold font-[GoogleSans-Bold]"> </b></b></b>
                 </section>
@@ -126,71 +93,29 @@ const JudgingCriteriaSection = () => {
                 <section className="mt-8 text-justify">
                     <ol className="ml-5 list-decimal">
                         <li className="mt-4 font-normal text-justify text-gray-700 dark:text-gray-400">
-                            Technical Architecture & Google Technologies 💻
-                            <ol className="ml-5 list-[upper-roman]">
+                            <b className="font-bold font-[GoogleSans-Bold]">Technical Architecture & Google Technologies 💻</b>
+                            <ol className="ml-5 list-none mt-2">
                                 <li>
-                                    Does the team clearly describe their <b className="font-bold font-[GoogleSans-Bold]">architecture</b>?
-                                </li>
-                                <li>
-                                    Do they provide a clear explanation of the <b className="font-bold font-[GoogleSans-Bold]">components</b> of their system and <b className="font-bold font-[GoogleSans-Bold]">outline the responsibilities</b> of each component?
-                                </li>
-                                <li>
-                                    Have they justified their use of <b className="font-bold font-[GoogleSans-Bold]">Google Cloud, Firebase, Gemini, or other Google products</b>?
-                                </li>
-                            </ol>
-                            {/* Does the team clearly describe the following: <b className="font-bold font-[GoogleSans-Bold]">architecture</b>,
-                            high-level <b className="font-bold font-[GoogleSans-Bold]">components</b>, <b className="font-bold font-[GoogleSans-Bold]">responsibility</b> of each component,
-                            <b className="font-bold font-[GoogleSans-Bold]"> specific products and platform</b> they implemented? Have they justified their use of <b className="font-bold font-[GoogleSans-Bold]">Google Cloud, Firebase, Gemini, or other Google products they used</b> and why?<b className="font-bold font-[GoogleSans-Bold]"> 💻</b> */}
-                        </li>
-                        <li className="mt-4 font-normal text-justify text-gray-700 dark:text-gray-400">
-                            Technical Implementation & Challenges 💻
-                            <ol className="ml-5 list-[upper-roman]">
-                                <li>
-                                    Has the team successfully <b className="font-bold font-[GoogleSans-Bold]">implemented all required technical components</b>?
-                                </li>
-                                <li>
-                                    Have they <b className="font-bold font-[GoogleSans-Bold]">highlighted a major technical challenge</b> they faced?
-                                </li>
-                                <li>
-                                    Did they <b className="font-bold font-[GoogleSans-Bold]">explain how they resolved the challenge and describe key technical decisions</b>?
+                                    The team must clearly describe their system architecture, outlining key components and responsibilities, while justifying their use of Google Cloud, Firebase, Gemini, or other Google technologies.
                                 </li>
                             </ol>
                         </li>
                         <li className="mt-4 font-normal text-justify text-gray-700 dark:text-gray-400">
-                            Completeness and Demonstration 💻
-                            <ol className="ml-5 list-[upper-roman]">
+                            <b className="font-bold font-[GoogleSans-Bold]">Technical Implementation & Challenges 💻</b>
+                            <ol className="ml-5 list-none mt-2">
                                 <li>
-                                    Has the team developed a <b className="font-bold font-[GoogleSans-Bold]">functional prototype</b>?
-                                </li>
-                                <li>
-                                    Did they build it using <b className="font-bold font-[GoogleSans-Bold]">real coding</b> or at least a <b className="font-bold font-[GoogleSans-Bold]">low-code platform</b>, and <b className="font-bold font-[GoogleSans-Bold]">successfully demonstrate</b> it?
+                                    The team must successfully implement all required technical components, highlight a major technical challenge, explain how they resolved it, and describe key technical decisions.
                                 </li>
                             </ol>
-                            {/* Does the team clearly describe the following: <b className="font-bold font-[GoogleSans-Bold]">architecture</b>,
-                            high-level <b className="font-bold font-[GoogleSans-Bold]">components</b>, <b className="font-bold font-[GoogleSans-Bold]">responsibility</b> of each component,
-                            <b className="font-bold font-[GoogleSans-Bold]">specific products and platform</b> they implemented? Has the team
-                            clearly explained what <b className="font-bold font-[GoogleSans-Bold]">Google technology they used</b> and why? 💻 */}
                         </li>
-                        {/* <li className="px-2 mt-4 font-normal text-justify text-gray-700 dark:text-gray-400">
-                            Does the video demonstration show an
-                            <b className="font-bold font-[GoogleSans-Bold]">actual working application</b> (not a mockup) and
-                            <b className="font-bold font-[GoogleSans-Bold]">how a user will interact with the solution</b>? Does the demo show
-                            how the solution
-                            <b className="font-bold font-[GoogleSans-Bold]">makes effective and appropriate use of the features</b> of the chosen
-                            Google technology or platform? 💻
+                        <li className="mt-4 font-normal text-justify text-gray-700 dark:text-gray-400">
+                            <b className="font-bold font-[GoogleSans-Bold]">Completeness and Demonstration 💻</b>
+                            <ol className="ml-5 list-none mt-2">
+                                <li>
+                                    The team must develop a functional prototype, preferably with real coding, but at least using a low-code platform, and successfully demonstrate it.
+                                </li>
+                            </ol>
                         </li>
-                        <li className="px-2 mt-4 font-normal text-justify text-gray-700 dark:text-gray-400">
-                            Does the video demonstration show an
-                            <b className="font-bold font-[GoogleSans-Bold]">actual working application</b> (not a mockup) and
-                            <b className="font-bold font-[GoogleSans-Bold]">how a user will interact with the solution</b>? Does the demo show
-                            how the solution
-                            <b className="font-bold font-[GoogleSans-Bold]">makes effective and appropriate use of the features</b> of the chosen
-                            Google technology or platform? 💻
-                        </li>
-                        <li className="px-2 mt-4 font-normal text-justify text-gray-700 dark:text-gray-400">
-                            Can the solution, in its current form or minor structural changes,
-                            <b className="font-bold font-[GoogleSans-Bold]">support more users and increased scale</b>?<b className="font-bold font-[GoogleSans-Bold]"> 💻</b>
-                        </li> */}
                     </ol>
                 </section>
 
