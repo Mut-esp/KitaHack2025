@@ -20,7 +20,7 @@ const SdgInfoSection = () => {
               In 2015, the United Nations established 17 Sustainable Development Goals (SDGs) to be achieved by 2030, aiming to end poverty, ensure prosperity, and protect the planet. These goals were agreed upon by all 193 United Nations Member States as a global blueprint for a better future.
             </li>
             <li className="text-justify lg:text-left">
-              For KitaHack and the 2025 Solution Challenge, we encourage participants to develop projects that contribute to one or more of the 17 SDGs using <strong>Google's AI technologies</strong>, such as <strong>Gemini AI, Vertex AI, and Google Cloud AI</strong>. By leveraging these powerful tools, participants can build innovative solutions that tackle global challenges, drive sustainability, and create meaningful change.
+              For KitaHack and the 2025 Solution Challenge, we encourage participants to develop projects that contribute to one or more of the 17 SDGs using <strong>Google's AI technologies</strong>, such as <strong>Gemini AI, Vertex AI, and Google AI Studio</strong>. By leveraging these powerful tools, participants can build innovative solutions that tackle global challenges, drive sustainability, and create meaningful change.
             </li>
             <li className="text-justify lg:text-left">
               You can learn more about the SDGs and their specific targets on the{" "}

@@ -26,9 +26,7 @@ const KitaHackInfoSection = () => {
                             Purpose
                         </h3>
                         <p className="text-left text-gray-700 max-w-prose dark:text-gray-400">
-                            The main purpose of KitaHack is to help participants improve their proposals for the <a href="https://developers.google.com/community/gdsc-solution-challenge" className="text-blue-600 font-[GoogleSans-Bold] font-bold">
-                                2025 Solution Challenge
-                            </a>.
+                            The main purpose of KitaHack is to help participants improve their proposals for the 2025 Solution Challenge
                             We provide valuable feedback, networking opportunities with industry professionals, and mentorship from experts. Participants will also have the chance to win exciting prizes from our sponsors!
                         </p>
 

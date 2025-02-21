@@ -5,7 +5,7 @@ import SdgInfoSection from "./_components/HomePage/sdg-info-section/SdgInfoSecti
 // import HowToJoinSection from "./_components/HomePage/howtojoin-section/HowToJoinSection";
 import TeamFormationSection from "./_components/HomePage/team-formation-section/TeamFormationSection";
 import JudgingCriteriaSection from "./_components/HomePage/judging-criteria-section/JudgingCriteriaSection";
-import SubmissionCriteriaSection from "./_components/HomePage/submission-criteria-section/SubmissionCriteriaSection";
+// import SubmissionCriteriaSection from "./_components/HomePage/submission-criteria-section/SubmissionCriteriaSection";
 // import MentorsSection from "./_components/HomePage/mentor-section/MentorSection";
 import FAQsSection from "./_components/HomePage/faqs-section/FAQsSection";
 import AIinfoSection from "./_components/HomePage/ai-info-section/AIinfoSection";
@@ -31,7 +31,7 @@ export default function Home() {
 
       <JudgingCriteriaSection/>
 
-      <SubmissionCriteriaSection/>
+      {/* <SubmissionCriteriaSection/> */}
 
       {/* <MentorsSection/> */}
 
