@@ -206,9 +206,9 @@ const JudgingCriteriaSection = () => {
 
                     <p className="mt-4">
                         We average the scores from multiple judges and
-                        <strong className="font-bold font-[GoogleSans-Bold]">drop the highest and lowest scores.</strong> This helps to
+                        <strong className="font-bold font-[GoogleSans-Bold]"> drop the highest and lowest scores.</strong> This helps to
                         reduce the impact of any individual judge's opinion and focuses on the
-                        <strong className="font-bold font-[GoogleSans-Bold]">collective judgment of the group.</strong>
+                        <strong className="font-bold font-[GoogleSans-Bold]"> collective judgment of the group.</strong>
                     </p>
 
                     <p className="mt-4">
