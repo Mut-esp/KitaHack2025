@@ -46,7 +46,7 @@ const TimeTickingSection = () => {
                     Time ticking ⏰
                 </h2>
                 <p className="mt-2 text-3xl text-center font-[GoogleSans-Bold] font-bold">
-                    Days until Demo-day
+                Prototype Submission
                 </p>
 
                 <div className={"flex flex-col text-white text-center mt-4 gap-5 sm:flex-row sm:justify-center"}>
