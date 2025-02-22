@@ -7,7 +7,7 @@ const JudgingCriteriaSection = () => {
                 <h2 className="font-semibold leading-7 lg:text-center text-yellow-500">
                     Take note 📝
                 </h2>
-                <p className="mt-2 text-3xl lg:text-center font-[GoogleSans-Bold] font-bold tracking-tight text-gray-700 sm:text-4xl">
+                <p className="mt-2 text-3xl lg:text-center font-[GoogleSans-Bold] dark:text-gray-100 font-bold tracking-tight text-gray-700 sm:text-4xl">
                     Judging Criteria
                 </p>
 
@@ -122,7 +122,7 @@ const JudgingCriteriaSection = () => {
                 <h3 className="mt-10 text-xl font-bold font-[GoogleSans-Bold] text-center text-gray-600 md:text-4xl dark:text-white">
                     Ensuring Fair and Impartial Judging
                 </h3>
-                <section className="mt-8 text-justify">
+                <section className="mt-8 text-justify text-gray-600 dark:text-gray-400">
                     <p className="mt-4">
                         Ensuring fair and unbiased judging is crucial for the integrity of any
                         competition. We implement measures to eliminate bias when evaluating

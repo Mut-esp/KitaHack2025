@@ -11,32 +11,32 @@ const AIinfoSection = () => {
                         Discover AI Technologies.
                     </h2>
 
-                    <h1 className={"font-black text-3xl lg:text-4xl font-[GoogleSans-Bold] text-gray-700"}>What is AI?</h1>
-                    <p className={"text-justify"}>
+                    <h1 className={"font-black text-3xl lg:text-4xl font-[GoogleSans-Bold] dark:text-gray-100"}>What is AI?</h1>
+                    <p className={"text-justify dark:text-gray-400"}>
                         Artificial Intelligence (AI) refers to the simulation of human intelligence in machines, enabling them to learn, reason, and make decisions. AI is revolutionizing industries by automating tasks, optimizing processes, and providing data-driven insights to solve complex problems.
                     </p>
                 </div>
 
                 <div className={"grid grid-cols-1 lg:grid-cols-[1fr,1fr,1fr] gap-16 "}>
                     <div className={"space-y-10 flex flex-col items-center"}>
-                        <Image src={"/images/ai-studio-icon.png"} alt="ai-studio-icon" width={250} height={250} className="shadow-2xl shadow-blue-400 dark:shadow-gray-400 p-4 rounded-lg" />
+                        <Image src={"/images/ai-studio-icon.png"} alt="ai-studio-icon" width={250} height={250} className="shadow-2xl shadow-blue-400 p-4 rounded-lg" />
                         <div className={"space-y-4"}>
-                            <h1 className={"font-black text-3xl lg:text-4xl font-[GoogleSans-Bold] text-gray-700 text-center"}>Google <br />AI Studio</h1>
-                            <p className={"text-center text-xl text-gray-800"}> A web-based platform for quickly prototyping, testing, and deploying AI models using Google's advanced technologies.</p>
+                            <h1 className={"font-black text-3xl lg:text-4xl font-[GoogleSans-Bold] dark:text-gray-100  text-center"}>Google <br />AI Studio</h1>
+                            <p className={"text-center text-xl text-gray-800 dark:text-gray-400"}> A web-based platform for quickly prototyping, testing, and deploying AI models using Google's advanced technologies.</p>
                         </div>
                     </div>
                     <div className={"space-y-10 flex flex-col items-center"}>
-                        <Image src={"/images/Gemini-icon.png"} alt="Gemini-icon" width={250} height={250} className="shadow-2xl shadow-blue-400 dark:shadow-gray-400 p-4 rounded-lg" />
+                        <Image src={"/images/Gemini-icon.png"} alt="Gemini-icon" width={250} height={250} className="shadow-2xl shadow-blue-400 p-4 rounded-lg" />
                         <div className={"space-y-4"}>
-                            <h1 className={"font-black text-3xl lg:text-4xl font-[GoogleSans-Bold] text-gray-700 text-center h-[80px] flex justify-center items-center"}>Gemini AI</h1>
-                            <p className={"text-center text-xl text-gray-800 "}> A cutting-edge multimodal AI model designed for natural language understanding, code generation, and more.</p>
+                            <h1 className={"font-black text-3xl lg:text-4xl font-[GoogleSans-Bold] text-gray-700 text-center h-[80px] flex justify-center dark:text-gray-100 items-center"}>Gemini AI</h1>
+                            <p className={"text-center text-xl text-gray-800 dark:text-gray-400 "}> A cutting-edge multimodal AI model designed for natural language understanding, code generation, and more.</p>
                         </div>
                     </div>
                     <div className={"space-y-10 flex flex-col items-center"}>
-                        <Image src={"/images/VertexAI-icon.webp"} alt="VertexAI-icon.webp" width={250} height={250} className="shadow-2xl shadow-blue-400 dark:shadow-gray-400 p-4 rounded-lg" />
+                        <Image src={"/images/VertexAI-icon.webp"} alt="VertexAI-icon.webp" width={250} height={250} className="shadow-2xl shadow-blue-400 p-4 rounded-lg" />
                         <div className={"space-y-4"}>
-                            <h1 className={"font-black text-3xl lg:text-4xl font-[GoogleSans-Bold] text-gray-700 text-center  h-[80px] flex justify-center items-center"}>Vertex AI</h1>
-                            <p className={"text-center text-xl text-gray-800"}> A unified platform for building, deploying, and scaling machine learning models efficiently.</p>
+                            <h1 className={"font-black text-3xl lg:text-4xl font-[GoogleSans-Bold] text-gray-700 text-center  h-[80px] flex justify-center dark:text-gray-100 items-center"}>Vertex AI</h1>
+                            <p className={"text-center text-xl text-gray-800 dark:text-gray-400"}> A unified platform for building, deploying, and scaling machine learning models efficiently.</p>
                         </div>
                     </div>
                 </div>

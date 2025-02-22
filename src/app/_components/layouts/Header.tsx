@@ -1,5 +1,18 @@
 "use client"
 import Image from "next/image";
+
+import { Moon, Sun } from "lucide-react"
+import { useTheme } from "next-themes"
+// import { Button } from "@/components/ui/button"
+
+// import {
+//     DropdownMenu,
+//     DropdownMenuContent,
+//     DropdownMenuItem,
+//     DropdownMenuTrigger,
+// } from "@/components/ui/dropdown-menu"
+
+
 import {
     Menubar,
     MenubarContent,
@@ -21,7 +34,6 @@ import {
     Sidebar,
     SidebarContent,
     SidebarGroup,
-
     SidebarGroupContent,
     SidebarMenu,
     SidebarTrigger,
@@ -155,6 +167,9 @@ const Header = ({ }) => {
         toggleSidebar,
     } = useSidebar()
 
+    const { setTheme } = useTheme()
+
+
     const MoreMobileItem = forwardRef<
         React.ElementRef<typeof Link>,
         React.ComponentPropsWithoutRef<typeof Link> & { src?: string }
@@ -177,7 +192,7 @@ const Header = ({ }) => {
                             alt={`${title} icon`}
                             width={24}
                             height={24}
-                            className="w-6 h-6 flex-shrink-0"
+                            className="w-6 h-6 flex-shrink-0 dark:invert dark:brightness-0 dark:filter"
                         />
                     )}
 
@@ -212,7 +227,7 @@ const Header = ({ }) => {
                             alt={`${title} icon`}
                             width={24}
                             height={24}
-                            className="w-6 h-6 flex-shrink-0"
+                            className="w-6 h-6 flex-shrink-0 dark:invert dark:brightness-0 dark:filter"
                         />
                     )}
 
@@ -319,8 +334,9 @@ const Header = ({ }) => {
 
     return (
 
-        <header className="h-16 text-[15px] fixed z-20 inset-0 bg-white">
+        <header className="h-16 text-[15px] fixed z-20 inset-0 bg-gray-100 dark:bg-black">
             <nav className="mx-6 lg:mx-40 flex lg:justify-between items-center h-full">
+
                 <div className="flex items-center">
                     <Link href={"/"}>
                         <Image src="/images/KitaHack2025-logo.svg" alt="" width={200} height={300} className="max-h-[120px] max-w-[120px] md:max-h-[200px] md:max-w-[200px] cursor-pointer" />
@@ -328,40 +344,68 @@ const Header = ({ }) => {
                 </div>
 
 
-                <div className={"hidden lg:block"}>
-                    <Menubar>
+
+                <div className={"flex gap-4 ml-auto mr-2 lg:mx-0"}>
+                    <Menubar className={""}>
                         <MenubarMenu>
-                            <MenubarTrigger><a href="#faqs">FAQs</a></MenubarTrigger>
-                        </MenubarMenu>
-                        <MenubarMenu>
-                            <MenubarTrigger>Events</MenubarTrigger>
-                            <MenubarContent className={"max-w-24"} align="end">
-                                {eventsContents.map((event) => (
-                                    <EventItem key={event.title} title={event.title} href={event.href} subEvents={event.subEvents} />
-                                ))}
+                            <MenubarTrigger className={"p-1"}>
+
+                                <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                                <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                                <span className="sr-only">Toggle theme</span>
+
+                            </MenubarTrigger>
+                            <MenubarContent className={""} align="end">
+                                <MenubarItem onClick={() => setTheme("light")}>
+                                    Light
+                                </MenubarItem>
+                                <MenubarItem onClick={() => setTheme("dark")}>
+                                    Dark
+                                </MenubarItem>
+                                <MenubarItem onClick={() => setTheme("system")}>
+                                    System
+                                </MenubarItem>
                             </MenubarContent>
                         </MenubarMenu>
 
-                        <MenubarMenu>
-                            <MenubarTrigger>Details</MenubarTrigger>
-                            <MenubarContent align="end" className={"max-h-64 overflow-y-auto hidden lg:block"}>
-                                {moreContents.map((moreContent) => (
-                                    <MoreItem
-                                        key={moreContent.title}
-                                        title={moreContent.title}
-                                        src={moreContent.src}
-                                        href={moreContent.href}
-                                        className={"px-2 py-4"}
-                                    >
-                                        {moreContent.description}
-                                    </MoreItem>
-                                ))}
-                            </MenubarContent>
-                        </MenubarMenu>
                     </Menubar>
-                </div>
 
-                <SidebarTrigger className={"lg:hidden ml-auto"} />
+
+                    <div className={"hidden lg:block"}>
+                        <Menubar>
+                            <MenubarMenu>
+                                <MenubarTrigger><a href="#faqs">FAQs</a></MenubarTrigger>
+                            </MenubarMenu>
+                            <MenubarMenu>
+                                <MenubarTrigger>Events</MenubarTrigger>
+                                <MenubarContent className={"max-w-24"} align="end">
+                                    {eventsContents.map((event) => (
+                                        <EventItem key={event.title} title={event.title} href={event.href} subEvents={event.subEvents} />
+                                    ))}
+                                </MenubarContent>
+                            </MenubarMenu>
+
+                            <MenubarMenu>
+                                <MenubarTrigger>Details</MenubarTrigger>
+                                <MenubarContent align="end" className={"max-h-64 overflow-y-auto hidden lg:block"}>
+                                    {moreContents.map((moreContent) => (
+                                        <MoreItem
+                                            key={moreContent.title}
+                                            title={moreContent.title}
+                                            src={moreContent.src}
+                                            href={moreContent.href}
+                                            className={"px-2 py-4"}
+                                        >
+                                            {moreContent.description}
+                                        </MoreItem>
+                                    ))}
+                                </MenubarContent>
+                            </MenubarMenu>
+                        </Menubar>
+                    </div>
+
+                </div>
+                <SidebarTrigger className={"lg:hidden"} />
                 <div className={"lg:hidden"}>
                     <Sidebar side={"right"} collapsible={"offcanvas"} variant={"sidebar"} >
                         <SidebarContent>
