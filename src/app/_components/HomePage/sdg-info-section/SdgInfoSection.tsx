@@ -11,7 +11,7 @@ const SdgInfoSection = () => {
           <h2 className="font-semibold leading-7 lg:text-center text-green-500">
             Join to preserve the environment!
           </h2>
-          <p className="mt-2 text-3xl lg:text-center font-[GoogleSans-Bold] font-bold tracking-tight text-gray-700 sm:text-4xl">
+          <p className="mt-2 text-3xl lg:text-center font-[GoogleSans-Bold] font-bold tracking-tight text-gray-700 dark:text-gray-100 sm:text-4xl">
             What is Sustainable Development Goals?
           </p>
 

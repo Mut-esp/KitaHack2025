@@ -5,6 +5,7 @@ import * as React from "react"
 
 import "./globals.css";
 import HeaderFooter from "./_components/layouts/HeaderFooter";
+import { ThemeProvider } from "@/components/theme-provider";
 
 
 
@@ -43,9 +44,22 @@ export default function RootLayout({
         className={`antialiased`}
       >
 
-        <HeaderFooter>
+        {/* with theme */}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <HeaderFooter>
+            {children}
+          </HeaderFooter>
+        </ThemeProvider>
+
+        {/* without theme */}
+        {/* <HeaderFooter>
           {children}
-        </HeaderFooter>
+        </HeaderFooter> */}
 
       </body>
     </html>

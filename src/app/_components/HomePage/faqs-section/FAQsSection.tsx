@@ -36,18 +36,18 @@ const FAQsSection = () => {
         <h2 className="font-semibold leading-7 lg:text-center text-yellow-500">
           Have Questions?
         </h2>
-        <p className="mt-2 text-3xl lg:text-center font-[GoogleSans-Bold] font-bold tracking-tight text-gray-700 sm:text-4xl">
+        <p className="mt-2 text-3xl lg:text-center font-[GoogleSans-Bold] font-bold tracking-tight text-gray-700 dark:text-gray-100 sm:text-4xl">
           Frequently Asked Questions
         </p>
 
-        <dl className="space-y-8 divide-y divide-gray-900/10">
+        <dl className="space-y-8 divide-y divide-gray-900/10 dark:divide-gray-400">
           {faqs.map((faq, index) => (
             <div key={index} className="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
-              <dt className="text-base font-semibold leading-7 text-gray-700 lg:col-span-5">
+              <dt className="text-base font-semibold leading-7 lg:col-span-5 text-gray-700 dark:text-gray-100">
                 {faq.q}
               </dt>
               <dd className="mt-4 lg:col-span-7 lg:mt-0">
-                <p className="text-base leading-7 text-gray-600">
+                <p className="text-base leading-7 text-gray-600 dark:text-gray-400">
                   {faq.a}
                 </p>
               </dd>
