@@ -334,7 +334,7 @@ const Header = ({ }) => {
 
     return (
 
-        <header className="h-16 text-[15px] fixed z-20 inset-0 bg-gray-100 dark:bg-black">
+        <header className="h-16 text-[15px] fixed z-20 inset-0 bg-white/40 dark:bg-black/40 backdrop-blur-md">
             <nav className="mx-6 lg:mx-40 flex lg:justify-between items-center h-full">
 
                 <div className="flex items-center">
