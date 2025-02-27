@@ -13,7 +13,7 @@ import AIinfoSection from "./_components/HomePage/ai-info-section/AIinfoSection"
 
 export default function Home() {
   return (
-    <main className="py-20 space-y-32">
+    <main className="py-20 space-y-32 z-0">
 
       <HomeLandingSection />
 
