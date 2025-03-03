@@ -32,7 +32,7 @@ const HomeLandingSection = () => {
     //     { src: "/images/Stripe.svg", alt: "Stripe" },
     //     { src: "/images/Reddit.svg", alt: "Reddit" },
     // ];
-    
+
     return (
         <section className="flex items-center lg:mt-20 z-10">
             <div className="container px-6 mx-auto z-10">
@@ -90,8 +90,8 @@ const HomeLandingSection = () => {
                                 Innovate, Build and Compete!
                             </h1>
                             <p className="max-w-2xl mb-6 font-normal text-gray-700 dark:text-gray-400 lg:mb-8">
-                                <strong><em>GDGoC KitaHack 2025</em></strong> is 
-                                the ultimate hackathon for developers, designers, and tech enthusiasts. Compete, collaborate, and create innovative 
+                                <strong><em>GDGoC KitaHack 2025</em></strong> is
+                                the ultimate hackathon for developers, designers, and tech enthusiasts. Compete, collaborate, and create innovative
                                 solutions. <span className="underline"><a href="">Explore Google's latest AI tools</a></span> through hands-on workshops,
                                 inspiring sessions, and more.
                             </p>
@@ -130,32 +130,32 @@ const HomeLandingSection = () => {
                                 {[...Array(2)].map((_, i) => (
                                     <>
                                         <a key={`spotify-${i}`} href="#" target="_blank" rel="noopener noreferrer" className="snap-center flex items-center">
-                                            <img src="/images/Spotify.svg" 
-                                                alt="Spotify" 
+                                            <img src="/images/Spotify.svg"
+                                                alt="Spotify"
                                                 className="opacity-50 hover:opacity-100"
                                             />
                                         </a>
                                         <a key={`google-${i}`} href="#" target="_blank" rel="noopener noreferrer" className="snap-center flex items-center">
-                                            <img src="/images/Google.svg" 
-                                                alt="Google" 
+                                            <img src="/images/Google.svg"
+                                                alt="Google"
                                                 className="opacity-50 hover:opacity-100"
                                             />
                                         </a>
                                         <a key={`pinterest-${i}`} href="#" target="_blank" rel="noopener noreferrer" className="snap-center flex items-center">
-                                            <img src="/images/Pinterest.svg" 
-                                                alt="Pinterest" 
+                                            <img src="/images/Pinterest.svg"
+                                                alt="Pinterest"
                                                 className="opacity-50 hover:opacity-100"
                                             />
                                         </a>
                                         <a key={`stripe-${i}`} href="#" target="_blank" rel="noopener noreferrer" className="snap-center flex items-center">
-                                            <img src="/images/Stripe.svg" 
-                                                alt="Stripe" 
+                                            <img src="/images/Stripe.svg"
+                                                alt="Stripe"
                                                 className="object-contain opacity-50 hover:opacity-100"
                                             />
                                         </a>
                                         <a key={`reddit-${i}`} href="#" target="_blank" rel="noopener noreferrer" className="snap-center flex items-center">
-                                            <img src="/images/Reddit.svg" 
-                                                alt="Reddit" 
+                                            <img src="/images/Reddit.svg"
+                                                alt="Reddit"
                                                 className="opacity-50 hover:opacity-100"
                                             />
                                         </a>
@@ -166,7 +166,8 @@ const HomeLandingSection = () => {
                     </div>
 
                     {/* JavaScript for manual scrolling */}
-                    <script dangerouslySetInnerHTML={{ __html: `
+                    <script dangerouslySetInnerHTML={{
+                        __html: `
                         (function() {
                         const scrollContainer = document.getElementById('scrollContainer');
                         const scrollContent = document.getElementById('scrollContent');
