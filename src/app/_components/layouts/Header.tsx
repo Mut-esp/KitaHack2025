@@ -346,28 +346,47 @@ const Header = ({ }) => {
                 />
             </div>
 
-            <header className="h-16 text-[15px] fixed z-20 inset-0 bg-gradient-to-r from-[#FE79B9]/30 via-[#AD00FF]/30 to-[#2489FF]/30 backdrop-blur-md dark:bg-black/40">
+            <header className="h-16 xl:h-24 text-[15px] fixed z-20 inset-0 bg-gradient-to-r from-[#FE79B9]/30 via-[#AD00FF]/30 to-[#2489FF]/30 backdrop-blur-md dark:bg-black/40">
 
 
-                <nav className="mx-6 lg:mx-40 flex lg:justify-between items-center h-full">
+                {/* <nav className="mx-6 lg:ml-24 lg:mr-12 flex justify-center items-center h-full min-w-screen"> */}
+                <nav className="mx-6 lg:ml-24 lg:mr-12 flex xl:grid xl:grid-cols-[1fr_auto_1fr] items-center h-full min-w-screen">
 
-                    <div className="flex items-center">
+                    <div className={"hidden xl:flex xl:items-center xl:mr-auto xl:ml-10"}>
+                        <ul className={"flex items-center gap-4 text-white w-full"}>
+                            <li><Link href="">FAQs</Link></li>
+                            <li><Link href="">About</Link></li>
+                            <li><Link href="">AI Tools</Link></li>
+                            <li><Link href="">Criteria</Link></li>
+                        </ul>
+                    </div>
+                    <div className="">
                         <Link href={"/"}>
-                            <Image src="/images/KitaHack2025-Logo-new.svg" alt="" width={200} height={300} className="max-h-[120px] max-w-[120px] md:max-h-[200px] md:max-w-[200px] cursor-pointer" />
+                            <Image src="/images/KitaHack2025-Logo-new.svg" alt="" width={200} height={300} className="max-h-[120px] max-w-[120px] md:max-h-[200px] md:max-w-[200px] cursor-pointer xl:mx-5" />
                         </Link>
                     </div>
 
 
 
-                    <div className={"flex gap-4 ml-auto mr-2 lg:mx-0"}>
-                        <Menubar className={""}>
+                    <div className={"flex gap-4 items-center ml-auto"}>
+
+                        <div className={"hidden xl:flex xl:items-center xl:gap-4 xl:w-full"}>
+                            <ul className={"flex items-center gap-4 text-white"}>
+                                <li><Link href="">Sponsors</Link></li>
+                                <li><Link href="">Chapters</Link></li>
+                                <li><Link href="">Events</Link></li>
+                            </ul>
+
+
+
+                        </div>
+
+                        <Menubar className={"bg-transparent border-none active:bg-transparent focus:bg-transparent focus-visible:bg-transparent data-[state=open]:bg-transparent aria-selected:bg-transparent group-active:bg-transparent shadow-md"}>
                             <MenubarMenu>
-                                <MenubarTrigger className={"p-1"}>
-
-                                    <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                                    <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                                <MenubarTrigger className="p-1 bg-transparent border-none active:bg-transparent focus:bg-transparent focus-visible:bg-transparent data-[state=open]:bg-transparent aria-selected:bg-transparent group-active:bg-transparent">
+                                    <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 border-none text-white" />
+                                    <Moon className="absolute h-[1.2rem] w-[1.2rem]  rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 border-none text-white" />
                                     <span className="sr-only">Toggle theme</span>
-
                                 </MenubarTrigger>
                                 <MenubarContent className={""} align="end">
                                     <MenubarItem onClick={() => setTheme("light")}>
@@ -384,8 +403,16 @@ const Header = ({ }) => {
 
                         </Menubar>
 
+                        <Link className={"hidden xl:block"} href="">
+                            <button className={"bg-white text-black font-black w-[10rem] px-7 py-3 rounded-full"}>
+                                Register Now
+                            </button>
+                        </Link>
 
-                        <div className={"hidden lg:block"}>
+
+                        {/* Shadcn for nav links */}
+
+                        {/* <div className={"hidden lg:block"}>
                             <Menubar>
                                 <MenubarMenu>
                                     <MenubarTrigger><a href="#faqs">FAQs</a></MenubarTrigger>
@@ -401,7 +428,7 @@ const Header = ({ }) => {
 
                                 <MenubarMenu>
                                     <MenubarTrigger>Details</MenubarTrigger>
-                                    <MenubarContent align="end" className={"max-h-64 overflow-y-auto hidden lg:block"}>
+                                    <MenubarContent align="end" className={"max-h-64 overflow-y-auto hidden lg:block backdrop-blur-md opacity-90"}>
                                         {moreContents.map((moreContent) => (
                                             <MoreItem
                                                 key={moreContent.title}
@@ -416,11 +443,13 @@ const Header = ({ }) => {
                                     </MenubarContent>
                                 </MenubarMenu>
                             </Menubar>
-                        </div>
+                        </div> */}
 
                     </div>
-                    <SidebarTrigger className={"lg:hidden"} />
-                    <div className={"lg:hidden"}>
+
+                    <SidebarTrigger className={"xl:hidden text-white bg-transparent border-none active:bg-transparent focus:bg-transparent focus-visible:bg-transparent data-[state=open]:bg-transparent aria-selected:bg-transparent group-active:bg-transparent active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white flex items-center space-x-1 rounded-md border shadow-md ml-3 h-[36px] w-[36px]"}/>
+
+                    <div className={"xl:hidden"}>
                         <Sidebar side={"right"} collapsible={"offcanvas"} variant={"sidebar"} >
                             <SidebarContent>
                                 <SidebarGroup>
@@ -494,4 +523,6 @@ const Header = ({ }) => {
     )
 }
 export default Header
+
+
 
