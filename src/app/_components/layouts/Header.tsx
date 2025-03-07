@@ -350,7 +350,7 @@ const Header = ({ }) => {
 
 
                 {/* <nav className="mx-6 lg:ml-24 lg:mr-12 flex justify-center items-center h-full min-w-screen"> */}
-                <nav className="mx-6 lg:ml-24 lg:mr-12 flex xl:grid xl:grid-cols-[1fr_auto_1fr] items-center h-full min-w-screen">
+                <nav className="mx-6 lg:ml-24 lg:mr-24 flex xl:grid xl:grid-cols-[1fr_auto_1fr] items-center h-full min-w-screen">
 
                     <div className={"hidden xl:flex xl:items-center xl:mr-auto xl:ml-10"}>
                         <Menubar className={"bg-transparent border-none active:bg-transparent focus:bg-transparent focus-visible:bg-transparent data-[state=open]:bg-transparent aria-selected:bg-transparent group-active:bg-transparent shadow-md text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>
@@ -359,6 +359,27 @@ const Header = ({ }) => {
                             </MenubarMenu>
 
                             <MenubarMenu>
+                                <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>Sponsors</MenubarTrigger>
+                            </MenubarMenu>
+
+                            <MenubarMenu>
+                                <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>Details</MenubarTrigger>
+                                <MenubarContent align="start" className={"max-h-64 overflow-y-auto hidden lg:block backdrop-blur-md"}>
+                                    {moreContents.map((moreContent) => (
+                                        <MoreItem
+                                            key={moreContent.title}
+                                            title={moreContent.title}
+                                            src={moreContent.src}
+                                            href={moreContent.href}
+                                            className={"px-2 py-4"}
+                                        >
+                                            {moreContent.description}
+                                        </MoreItem>
+                                    ))}
+                                </MenubarContent>
+                            </MenubarMenu>
+
+                            {/* <MenubarMenu>
                                 <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>About</MenubarTrigger>
                             </MenubarMenu>
 
@@ -368,7 +389,7 @@ const Header = ({ }) => {
 
                             <MenubarMenu>
                                 <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>AI Criteria</MenubarTrigger>
-                            </MenubarMenu>
+                            </MenubarMenu> */}
 
                         </Menubar>
                     </div>
@@ -417,9 +438,7 @@ const Header = ({ }) => {
 
                         <div className={"hidden xl:block"}>
                             <Menubar className={"bg-transparent border-none active:bg-transparent focus:bg-transparent focus-visible:bg-transparent data-[state=open]:bg-transparent aria-selected:bg-transparent group-active:bg-transparent shadow-md text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>
-                                <MenubarMenu>
-                                    <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>Sponsors</MenubarTrigger>
-                                </MenubarMenu>
+
 
                                 <MenubarMenu>
                                     <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>Chapters</MenubarTrigger>
