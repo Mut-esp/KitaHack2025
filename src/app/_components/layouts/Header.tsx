@@ -353,12 +353,24 @@ const Header = ({ }) => {
                 <nav className="mx-6 lg:ml-24 lg:mr-12 flex xl:grid xl:grid-cols-[1fr_auto_1fr] items-center h-full min-w-screen">
 
                     <div className={"hidden xl:flex xl:items-center xl:mr-auto xl:ml-10"}>
-                        <ul className={"flex items-center gap-4 text-white w-full"}>
-                            <li><Link href="">FAQs</Link></li>
-                            <li><Link href="">About</Link></li>
-                            <li><Link href="">AI Tools</Link></li>
-                            <li><Link href="">Criteria</Link></li>
-                        </ul>
+                        <Menubar className={"bg-transparent border-none active:bg-transparent focus:bg-transparent focus-visible:bg-transparent data-[state=open]:bg-transparent aria-selected:bg-transparent group-active:bg-transparent shadow-md text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>
+                            <MenubarMenu>
+                                <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>FAQs</MenubarTrigger>
+                            </MenubarMenu>
+
+                            <MenubarMenu>
+                                <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>About</MenubarTrigger>
+                            </MenubarMenu>
+
+                            <MenubarMenu>
+                                <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>AI Tools</MenubarTrigger>
+                            </MenubarMenu>
+
+                            <MenubarMenu>
+                                <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>AI Criteria</MenubarTrigger>
+                            </MenubarMenu>
+
+                        </Menubar>
                     </div>
                     <div className="">
                         <Link href={"/"}>
@@ -370,20 +382,17 @@ const Header = ({ }) => {
 
                     <div className={"flex gap-4 items-center ml-auto"}>
 
-                        <div className={"hidden xl:flex xl:items-center xl:gap-4 xl:w-full"}>
+                        {/* <div className={"hidden xl:flex xl:items-center xl:gap-4 xl:w-full"}>
                             <ul className={"flex items-center gap-4 text-white"}>
                                 <li><Link href="">Sponsors</Link></li>
                                 <li><Link href="">Chapters</Link></li>
                                 <li><Link href="">Events</Link></li>
                             </ul>
-
-
-
-                        </div>
+                        </div> */}
 
                         <Menubar className={"bg-transparent border-none active:bg-transparent focus:bg-transparent focus-visible:bg-transparent data-[state=open]:bg-transparent aria-selected:bg-transparent group-active:bg-transparent shadow-md"}>
                             <MenubarMenu>
-                                <MenubarTrigger className="p-1 bg-transparent border-none active:bg-transparent focus:bg-transparent focus-visible:bg-transparent data-[state=open]:bg-transparent aria-selected:bg-transparent group-active:bg-transparent">
+                                <MenubarTrigger className="p-1 bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10">
                                     <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 border-none text-white" />
                                     <Moon className="absolute h-[1.2rem] w-[1.2rem]  rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 border-none text-white" />
                                     <span className="sr-only">Toggle theme</span>
@@ -403,30 +412,29 @@ const Header = ({ }) => {
 
                         </Menubar>
 
-                        <Link className={"hidden xl:block"} href="">
-                            <button className={"bg-white text-black font-black w-[10rem] px-7 py-3 rounded-full"}>
-                                Register Now
-                            </button>
-                        </Link>
-
 
                         {/* Shadcn for nav links */}
 
-                        {/* <div className={"hidden lg:block"}>
-                            <Menubar>
+                        <div className={"hidden xl:block"}>
+                            <Menubar className={"bg-transparent border-none active:bg-transparent focus:bg-transparent focus-visible:bg-transparent data-[state=open]:bg-transparent aria-selected:bg-transparent group-active:bg-transparent shadow-md text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>
                                 <MenubarMenu>
-                                    <MenubarTrigger><a href="#faqs">FAQs</a></MenubarTrigger>
+                                    <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>Sponsors</MenubarTrigger>
                                 </MenubarMenu>
+
                                 <MenubarMenu>
-                                    <MenubarTrigger>Events</MenubarTrigger>
-                                    <MenubarContent className={"max-w-24"} align="end">
+                                    <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>Chapters</MenubarTrigger>
+                                </MenubarMenu>
+
+                                <MenubarMenu>
+                                    <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"} >Events</MenubarTrigger>
+                                    <MenubarContent className={"max-w-24 "} align="end">
                                         {eventsContents.map((event) => (
                                             <EventItem key={event.title} title={event.title} href={event.href} subEvents={event.subEvents} />
                                         ))}
                                     </MenubarContent>
                                 </MenubarMenu>
 
-                                <MenubarMenu>
+                                {/* <MenubarMenu>
                                     <MenubarTrigger>Details</MenubarTrigger>
                                     <MenubarContent align="end" className={"max-h-64 overflow-y-auto hidden lg:block backdrop-blur-md opacity-90"}>
                                         {moreContents.map((moreContent) => (
@@ -441,13 +449,20 @@ const Header = ({ }) => {
                                             </MoreItem>
                                         ))}
                                     </MenubarContent>
-                                </MenubarMenu>
+                                </MenubarMenu> */}
                             </Menubar>
-                        </div> */}
+                        </div>
 
+                        <Link className={"hidden xl:block"} href="">
+                            <button className={"bg-white text-black font-black w-[10rem] px-7 py-3 rounded-full"}>
+                                Register Now
+                            </button>
+                        </Link>
                     </div>
 
-                    <SidebarTrigger className={"xl:hidden text-white bg-transparent border-none active:bg-transparent focus:bg-transparent focus-visible:bg-transparent data-[state=open]:bg-transparent aria-selected:bg-transparent group-active:bg-transparent active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white flex items-center space-x-1 rounded-md border shadow-md ml-3 h-[36px] w-[36px]"}/>
+
+
+                    <SidebarTrigger className={"xl:hidden text-white bg-transparent border-none active:bg-transparent focus:bg-transparent focus-visible:bg-transparent data-[state=open]:bg-transparent aria-selected:bg-transparent group-active:bg-transparent active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white flex items-center space-x-1 rounded-md border shadow-md ml-3 h-[36px] w-[36px]"} />
 
                     <div className={"xl:hidden"}>
                         <Sidebar side={"right"} collapsible={"offcanvas"} variant={"sidebar"} >
