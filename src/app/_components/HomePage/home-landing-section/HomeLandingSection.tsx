@@ -5,34 +5,6 @@ import { Icon } from "@iconify/react";
 
 const HomeLandingSection = () => {
 
-    // const scrollRef = useRef<HTMLDivElement>(null);
-
-    // useEffect(() => {
-    //     const scrollContainer = scrollRef.current;
-    //     if (!scrollContainer) return;
-
-    //     const handleScroll = () => {
-    //         if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
-    //             // Reset scroll to start when reaching the middle
-    //             scrollContainer.scrollLeft = 0;
-    //         } else if (scrollContainer.scrollLeft <= 0) {
-    //             // If scrolling backward, set to middle to prevent abrupt jump
-    //             scrollContainer.scrollLeft = scrollContainer.scrollWidth / 2;
-    //         }
-    //     };
-
-    //     scrollContainer.addEventListener("scroll", handleScroll);
-    //     return () => scrollContainer.removeEventListener("scroll", handleScroll);
-    // }, []);
-
-    // const logos = [
-    //     { src: "/images/Spotify.svg", alt: "Spotify" },
-    //     { src: "/images/Google.svg", alt: "Google" },
-    //     { src: "/images/Pinterest.svg", alt: "Pinterest" },
-    //     { src: "/images/Stripe.svg", alt: "Stripe" },
-    //     { src: "/images/Reddit.svg", alt: "Reddit" },
-    // ];
-
     return (
         <section className="flex items-center lg:mt-20 z-10">
             <div className="container px-6 mx-auto z-10">
@@ -86,7 +58,7 @@ const HomeLandingSection = () => {
                                 <span className="ml-1">KitaHack2025</span>
                             </span>
                             {/* Header and Paragraph */}
-                            <h1 id="hero_title" className="font-semibold mt-3 mb-6 text-5xl text-black md:text-6xl xl:text-6xl">
+                            <h1 id="hero_title" className="font-semibold mt-3 mb-6 text-5xl text-black md:text-6xl xl:text-6xl dark:text-white">
                                 Innovate, Build and Compete!
                             </h1>
                             <p className="max-w-2xl mb-6 font-normal text-gray-700 dark:text-gray-400 lg:mb-8">
@@ -124,7 +96,7 @@ const HomeLandingSection = () => {
                     </div>
 
                     {/* Horizontal Scrollable Logos */}
-                    <div className="relative bg-[#FCFBFD] mt-24 p-8 rounded-2xl">
+                    <div className="relative bg-[#FCFBFD] mt-24 p-8 rounded-2xl dark:bg-[#1A1A1A]">
                         <div className="w-full space-x-10 overflow-x-auto no-scrollbar scroll-smooth snap-x">
                             <div className="flex space-x-10 min-w-max w-full animate-scroll">
                                 {[...Array(2)].map((_, i) => (
@@ -132,31 +104,37 @@ const HomeLandingSection = () => {
                                         <a key={`spotify-${i}`} href="#" target="_blank" rel="noopener noreferrer" className="snap-center flex items-center">
                                             <img src="/images/Spotify.svg"
                                                 alt="Spotify"
-                                                className="opacity-50 hover:opacity-100"
+                                                className="opacity-50 hover:opacity-100 dark:invert"
                                             />
                                         </a>
                                         <a key={`google-${i}`} href="#" target="_blank" rel="noopener noreferrer" className="snap-center flex items-center">
                                             <img src="/images/Google.svg"
                                                 alt="Google"
-                                                className="opacity-50 hover:opacity-100"
+                                                className="opacity-50 hover:opacity-100 dark:invert"
                                             />
                                         </a>
                                         <a key={`pinterest-${i}`} href="#" target="_blank" rel="noopener noreferrer" className="snap-center flex items-center">
                                             <img src="/images/Pinterest.svg"
                                                 alt="Pinterest"
-                                                className="opacity-50 hover:opacity-100"
+                                                className="opacity-50 hover:opacity-100 dark:invert"
                                             />
                                         </a>
                                         <a key={`stripe-${i}`} href="#" target="_blank" rel="noopener noreferrer" className="snap-center flex items-center">
                                             <img src="/images/Stripe.svg"
                                                 alt="Stripe"
-                                                className="object-contain opacity-50 hover:opacity-100"
+                                                className="opacity-50 hover:opacity-100 dark-gray dark:invert"
                                             />
                                         </a>
                                         <a key={`reddit-${i}`} href="#" target="_blank" rel="noopener noreferrer" className="snap-center flex items-center">
                                             <img src="/images/Reddit.svg"
                                                 alt="Reddit"
-                                                className="opacity-50 hover:opacity-100"
+                                                className="opacity-50 hover:opacity-100 dark:invert"
+                                            />
+                                        </a>
+                                        <a key={`monash-${i}`} href="#" target="_blank" rel="noopener noreferrer" className="snap-center flex items-center">
+                                            <img src="/images/GDG.svg"
+                                                alt="GDG"
+                                                className="opacity-50 hover:opacity-100 dark:invert"
                                             />
                                         </a>
                                     </>
