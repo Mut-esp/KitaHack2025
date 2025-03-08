@@ -5,34 +5,6 @@ import { Icon } from "@iconify/react";
 
 const HomeLandingSection = () => {
 
-    // const scrollRef = useRef<HTMLDivElement>(null);
-
-    // useEffect(() => {
-    //     const scrollContainer = scrollRef.current;
-    //     if (!scrollContainer) return;
-
-    //     const handleScroll = () => {
-    //         if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
-    //             // Reset scroll to start when reaching the middle
-    //             scrollContainer.scrollLeft = 0;
-    //         } else if (scrollContainer.scrollLeft <= 0) {
-    //             // If scrolling backward, set to middle to prevent abrupt jump
-    //             scrollContainer.scrollLeft = scrollContainer.scrollWidth / 2;
-    //         }
-    //     };
-
-    //     scrollContainer.addEventListener("scroll", handleScroll);
-    //     return () => scrollContainer.removeEventListener("scroll", handleScroll);
-    // }, []);
-
-    // const logos = [
-    //     { src: "/images/Spotify.svg", alt: "Spotify" },
-    //     { src: "/images/Google.svg", alt: "Google" },
-    //     { src: "/images/Pinterest.svg", alt: "Pinterest" },
-    //     { src: "/images/Stripe.svg", alt: "Stripe" },
-    //     { src: "/images/Reddit.svg", alt: "Reddit" },
-    // ];
-
     return (
         <section className="flex items-center lg:mt-20 z-10">
             <div className="container px-6 mx-auto z-10">
@@ -86,7 +58,7 @@ const HomeLandingSection = () => {
                                 <span className="ml-1">KitaHack2025</span>
                             </span>
                             {/* Header and Paragraph */}
-                            <h1 id="hero_title" className="font-semibold mt-3 mb-6 text-5xl text-black md:text-6xl xl:text-6xl">
+                            <h1 id="hero_title" className="font-semibold mt-3 mb-6 text-5xl text-black md:text-6xl xl:text-6xl dark:text-white">
                                 Innovate, Build and Compete!
                             </h1>
                             <p className="max-w-2xl mb-6 font-normal text-gray-700 dark:text-gray-400 lg:mb-8">
@@ -123,39 +95,89 @@ const HomeLandingSection = () => {
                         </div>
                     </div>
 
-                    {/* Horizontal Scrollable Logos */}
-                    <div className="relative bg-[#FCFBFD] mt-24 p-8 rounded-2xl">
+                    {/* University Logos */}
+                    <div className="relative bg-[#FCFBFD] mt-24 p-8 rounded-2xl dark:bg-[#1A1A1A]">
                         <div className="w-full space-x-10 overflow-x-auto no-scrollbar scroll-smooth snap-x">
-                            <div className="flex space-x-10 min-w-max w-full animate-scroll">
+                            <div className="flex space-x-1 min-w-max w-full animate-scroll">
                                 {[...Array(2)].map((_, i) => (
                                     <>
-                                        <a key={`spotify-${i}`} href="#" target="_blank" rel="noopener noreferrer" className="snap-center flex items-center">
-                                            <img src="/images/Spotify.svg"
-                                                alt="Spotify"
+                                        <a key={`APU-${i}`} href="https://gdg.community.dev/gdg-on-campus-asia-pacific-university-of-technology-innovation-kuala-lumpur-malaysia/" target="_blank" rel="noopener noreferrer" className="snap-center flex items-center">
+                                            <Image src="/images/university-logos/APU.svg"
+                                                alt="APU"
+                                                width={300}
+                                                height={100}
                                                 className="opacity-50 hover:opacity-100"
                                             />
                                         </a>
-                                        <a key={`google-${i}`} href="#" target="_blank" rel="noopener noreferrer" className="snap-center flex items-center">
-                                            <img src="/images/Google.svg"
-                                                alt="Google"
+                                        <a key={`IIUM-${i}`} href="https://gdg.community.dev/gdg-on-campus-international-islamic-university-malaysia-selangor-malaysia/" target="_blank" rel="noopener noreferrer" className="snap-center flex items-center">
+                                            <Image src="/images/university-logos/IIUM.svg"
+                                                alt="IIUM"
+                                                width={300}
+                                                height={100}
                                                 className="opacity-50 hover:opacity-100"
                                             />
                                         </a>
-                                        <a key={`pinterest-${i}`} href="#" target="_blank" rel="noopener noreferrer" className="snap-center flex items-center">
-                                            <img src="/images/Pinterest.svg"
-                                                alt="Pinterest"
+                                        <a key={`MMU-${i}`} href="https://gdg.community.dev/gdg-on-campus-multimedia-university-selangor-malaysia/" target="_blank" rel="noopener noreferrer" className="snap-center flex items-center">
+                                            <Image src="/images/university-logos/MMU.svg"
+                                                alt="MMU"
+                                                width={300}
+                                                height={100}
                                                 className="opacity-50 hover:opacity-100"
                                             />
                                         </a>
-                                        <a key={`stripe-${i}`} href="#" target="_blank" rel="noopener noreferrer" className="snap-center flex items-center">
-                                            <img src="/images/Stripe.svg"
-                                                alt="Stripe"
-                                                className="object-contain opacity-50 hover:opacity-100"
+                                        <a key={`MUM-${i}`} href="https://gdg.community.dev/gdg-on-campus-monash-university-malaysia-selangor-malaysia/" target="_blank" rel="noopener noreferrer" className="snap-center flex items-center">
+                                            <Image src="/images/university-logos/MUM.svg"
+                                                alt="MUM"
+                                                width={300}
+                                                height={100}
+                                                className="opacity-50 hover:opacity-100"
                                             />
                                         </a>
-                                        <a key={`reddit-${i}`} href="#" target="_blank" rel="noopener noreferrer" className="snap-center flex items-center">
-                                            <img src="/images/Reddit.svg"
-                                                alt="Reddit"
+                                        <a key={`SUM-${i}`} href="https://gdg.community.dev/gdg-on-campus-sunway-university-selangor-malaysia/" target="_blank" rel="noopener noreferrer" className="snap-center flex items-center">
+                                            <Image src="/images/university-logos/SUM.svg"
+                                                alt="SUM"
+                                                width={300}
+                                                height={100}
+                                                className="opacity-50 hover:opacity-100"
+                                            />
+                                        </a>
+                                        <a key={`tarumt-${i}`} href="https://gdg.community.dev/gdg-on-campus-tunku-abdul-rahman-university-of-management-and-technology-kuala-lumpur-malaysia/" target="_blank" rel="noopener noreferrer" className="snap-center flex items-center">
+                                            <Image src="/images/university-logos/tarumt.svg"
+                                                alt="tarumt"
+                                                width={300}
+                                                height={100}
+                                                className="opacity-50 hover:opacity-100"
+                                            />
+                                        </a>
+                                        <a key={`UM-${i}`} href="https://gdg.community.dev/gdg-on-campus-universiti-malaya-kuala-lumpur-malaysia/" target="_blank" rel="noopener noreferrer" className="snap-center flex items-center">
+                                            <Image src="/images/university-logos/UM.svg"
+                                                alt="UM"
+                                                width={300}
+                                                height={100}
+                                                className="opacity-50 hover:opacity-100"
+                                            />
+                                        </a>
+                                        <a key={`UPM-${i}`} href="https://gdg.community.dev/gdg-on-campus-universiti-putra-malaysia-selangor-malaysia/" target="_blank" rel="noopener noreferrer" className="snap-center flex items-center">
+                                            <Image src="/images/university-logos/UPM.svg"
+                                                alt="UPM"
+                                                width={300}
+                                                height={100}
+                                                className="opacity-50 hover:opacity-100"
+                                            />
+                                        </a>
+                                        <a key={`USM-${i}`} href="https://gdg.community.dev/gdg-on-campus-universiti-sains-malaysia-penang-malaysia/" target="_blank" rel="noopener noreferrer" className="snap-center flex items-center">
+                                            <Image src="/images/university-logos/USM.svg"
+                                                alt="USM"
+                                                width={300}
+                                                height={100}
+                                                className="opacity-50 hover:opacity-100"
+                                            />
+                                        </a>
+                                        <a key={`UTM-${i}`} href="https://gdg.community.dev/gdg-on-campus-universiti-teknologi-malaysia-johor-bahru-malaysia/" target="_blank" rel="noopener noreferrer" className="snap-center flex items-center">
+                                            <Image src="/images/university-logos/UTM.svg"
+                                                alt="UTM"
+                                                width={300}
+                                                height={100}
                                                 className="opacity-50 hover:opacity-100"
                                             />
                                         </a>
