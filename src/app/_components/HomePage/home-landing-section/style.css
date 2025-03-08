@@ -94,9 +94,13 @@
 .animate-scroll {
   display: flex;
   gap: 2.5rem;
-  animation: scroll 20s linear infinite;
+  animation: scroll 35s linear infinite;
 }
 
 .paused {
   animation-play-state: paused;
+}
+
+.dark-mode .invert-text {
+  filter: invert(1);
 }
