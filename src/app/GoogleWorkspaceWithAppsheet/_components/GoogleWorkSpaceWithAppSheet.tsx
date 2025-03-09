@@ -8,7 +8,6 @@ import {
     Dialog,
     DialogContent,
     DialogDescription,
-    DialogFooter,
     DialogHeader,
     DialogTitle,
     DialogTrigger,
@@ -69,7 +68,6 @@ const GoogleWorkSpaceWithAppSheet: React.FC<GoogleWorkSpaceWithAppSheetProps> = 
     rsvpLink,
     eventImage,
     description,
-    schedule,
     speakers,
     organizers,
     sponsorshipTitle,
@@ -87,7 +85,7 @@ const GoogleWorkSpaceWithAppSheet: React.FC<GoogleWorkSpaceWithAppSheetProps> = 
         seconds: "0",
     });
 
-    const { theme, setTheme } = useTheme();
+    const { theme } = useTheme();
 
 
     useEffect(() => {

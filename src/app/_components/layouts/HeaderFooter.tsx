@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image";
 import Footer from "./Footer"
 import Header from "./Header"
 import { SidebarProvider } from "@/components/ui/sidebar";
