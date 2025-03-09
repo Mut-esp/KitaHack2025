@@ -71,11 +71,11 @@ type EventContent = {
 
 const eventsContents: EventContent[] = [
 
-    {
-        title: "Coming Soon",
-        href: "",
-        subEvents: undefined, // Set subEvents to undefined 
-    }, // use this for no events
+    // {
+    //     title: "Coming Soon",
+    //     href: "",
+    //     subEvents: undefined, // Set subEvents to undefined 
+    // }, // use this for no events
     // {
     //     title: "Demo Day",
     //     href: "",
@@ -91,24 +91,32 @@ const eventsContents: EventContent[] = [
     //     href: "",
     //     subEvents: undefined, // Set subEvents to undefined instead of null
     // },
-    // {
-    //     title: "Workshops",
-    //     href: "",
-    //     subEvents: [
-    //         {
-    //             title: "No Workshops Yet",
-    //             href: "",
-    //         }, // use this for no workshops
-    //         {
-    //             title: "Sunway React & Firebase Workshop Series",
-    //             href: "/ReactAndFirebaseWorkshop",
-    //         },
-    //         {
-    //             title: "KDU Android Workshop",
-    //             href: "#sub-event-2",
-    //         },
-    //     ],
-    // }
+    {
+        title: "Workshops",
+        href: "",
+        subEvents: [
+            // {
+            //     title: "No Workshops Yet",
+            //     href: "",
+            // }, // use this for no workshops
+            {
+                title: "Tensorflow Workshop",
+                href: "/TensorflowWorkshop",
+            }, // use this for no workshops
+            {
+                title: "Google Workspace with Appsheet",
+                href: "/GoogleWorkspaceWithAppsheet",
+            }, // use this for no workshops
+            // {
+            //     title: "Sunway React & Firebase Workshop Series",
+            //     href: "/ReactAndFirebaseWorkshop",
+            // },
+            // {
+            //     title: "KDU Android Workshop",
+            //     href: "#sub-event-2",
+            // },
+        ],
+    }
 ];
 
 
@@ -157,7 +165,6 @@ const moreContents: { title: string; href: string; description: string; src: str
     //     src: "images/email.svg"
     // },
 ]
-
 
 
 const Header = ({ }) => {
@@ -334,60 +341,45 @@ const Header = ({ }) => {
 
     return (
 
-        <header className="h-16 text-[15px] fixed z-20 inset-0 bg-white/40 dark:bg-black/40 backdrop-blur-md">
-            <nav className="mx-6 lg:mx-40 flex lg:justify-between items-center h-full">
+        <>
 
-                <div className="flex items-center">
-                    <Link href={"/"}>
-                        <Image src="/images/KitaHack2025-logo.svg" alt="" width={200} height={300} className="max-h-[120px] max-w-[120px] md:max-h-[200px] md:max-w-[200px] cursor-pointer" />
-                    </Link>
-                </div>
+            {/* <div className="absolute inset-0 w-full h-[24rem] z-[-20]">
+                <Image
+                    src="/images/gradient-navbar.png"
+                    alt="Background"
+                    layout="fill"
+                    objectFit="cover"
+                    className="opacity-80 [mask-image:linear-gradient(to_bottom,black_10%,transparent_70%)] md:[mask-image:linear-gradient(to_bottom,black_10%,transparent_90%)] backdrop-blur-lg"
+                />
+            </div> */}
 
+            <header className="h-16 xl:h-24 text-[15px] fixed inset-0 bg-gradient-to-r from-[#FE79B9]/30 via-[#AD00FF]/30 to-[#2489FF]/30 backdrop-blur-md dark:bg-black/40 z-20">
 
+                {/* <nav className="mx-6 lg:ml-24 lg:mr-12 flex justify-center items-center h-full min-w-screen"> */}
+                <nav className="mx-6 lg:ml-24 lg:mr-24 flex xl:grid xl:grid-cols-[1fr_auto_1fr] items-center h-full min-w-screen">
 
-                <div className={"flex gap-4 ml-auto mr-2 lg:mx-0"}>
-                    <Menubar className={""}>
-                        <MenubarMenu>
-                            <MenubarTrigger className={"p-1"}>
-
-                                <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                                <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                                <span className="sr-only">Toggle theme</span>
-
-                            </MenubarTrigger>
-                            <MenubarContent className={""} align="end">
-                                <MenubarItem onClick={() => setTheme("light")}>
-                                    Light
-                                </MenubarItem>
-                                <MenubarItem onClick={() => setTheme("dark")}>
-                                    Dark
-                                </MenubarItem>
-                                <MenubarItem onClick={() => setTheme("system")}>
-                                    System
-                                </MenubarItem>
-                            </MenubarContent>
-                        </MenubarMenu>
-
-                    </Menubar>
-
-
-                    <div className={"hidden lg:block"}>
-                        <Menubar>
+                    <div className={"hidden xl:flex xl:items-center xl:mr-auto xl:ml-10"}>
+                        <Menubar className={"bg-transparent border-none active:bg-transparent focus:bg-transparent focus-visible:bg-transparent data-[state=open]:bg-transparent aria-selected:bg-transparent group-active:bg-transparent shadow-md text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>
                             <MenubarMenu>
-                                <MenubarTrigger><a href="#faqs">FAQs</a></MenubarTrigger>
-                            </MenubarMenu>
-                            <MenubarMenu>
-                                <MenubarTrigger>Events</MenubarTrigger>
-                                <MenubarContent className={"max-w-24"} align="end">
-                                    {eventsContents.map((event) => (
-                                        <EventItem key={event.title} title={event.title} href={event.href} subEvents={event.subEvents} />
-                                    ))}
-                                </MenubarContent>
+                                <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>
+                                    <Link href={"/#faqs"}>
+                                        FAQs
+                                    </Link>
+
+                                </MenubarTrigger>
                             </MenubarMenu>
 
                             <MenubarMenu>
-                                <MenubarTrigger>Details</MenubarTrigger>
-                                <MenubarContent align="end" className={"max-h-64 overflow-y-auto hidden lg:block"}>
+                                <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>
+                                    <Link href={"/#sponsors"}>
+                                        Sponsors
+                                    </Link>
+                                </MenubarTrigger>
+                            </MenubarMenu>
+
+                            <MenubarMenu>
+                                <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>Details</MenubarTrigger>
+                                <MenubarContent align="start" className={"max-h-64 overflow-y-auto hidden lg:block backdrop-blur-md"}>
                                     {moreContents.map((moreContent) => (
                                         <MoreItem
                                             key={moreContent.title}
@@ -401,82 +393,185 @@ const Header = ({ }) => {
                                     ))}
                                 </MenubarContent>
                             </MenubarMenu>
+
+                            {/* <MenubarMenu>
+                                <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>About</MenubarTrigger>
+                            </MenubarMenu>
+
+                            <MenubarMenu>
+                                <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>AI Tools</MenubarTrigger>
+                            </MenubarMenu>
+
+                            <MenubarMenu>
+                                <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>AI Criteria</MenubarTrigger>
+                            </MenubarMenu> */}
+
                         </Menubar>
                     </div>
-
-                </div>
-                <SidebarTrigger className={"lg:hidden"} />
-                <div className={"lg:hidden"}>
-                    <Sidebar side={"right"} collapsible={"offcanvas"} variant={"sidebar"} >
-                        <SidebarContent>
-                            <SidebarGroup>
-                                <SidebarGroupContent>
-                                    <SidebarMenu>
-                                        <Collapsible defaultOpen className="group/collapsible">
-                                            <SidebarMenuItem>
-                                                <CollapsibleTrigger asChild>
-                                                    <SidebarMenuButton>
-                                                        KitaHack 2025 Info
-
-                                                        <ChevronsUpDown className="h-4 w-4" />
-
-                                                    </SidebarMenuButton>
-                                                </CollapsibleTrigger>
-                                                <CollapsibleContent>
-                                                    <SidebarMenuSub>
-                                                        {moreContents.map((moreContent) => (
+                    <div className="">
+                        <Link href={"/"}>
+                            <Image src="/images/KitaHack2025-Logo-new.svg" alt="" width={200} height={300} className="max-h-[120px] max-w-[120px] md:max-h-[200px] md:max-w-[200px] cursor-pointer xl:mx-5" />
+                        </Link>
+                    </div>
 
 
-                                                            <MoreMobileItem
-                                                                key={moreContent.title}
-                                                                title={moreContent.title}
-                                                                src={moreContent.src}
-                                                                href={moreContent.href}
-                                                                className={"px-2 py-3"}
-                                                            >
-                                                                {moreContent.description}
-                                                            </MoreMobileItem>
+
+                    <div className={"flex gap-4 items-center ml-auto"}>
+
+                        {/* <div className={"hidden xl:flex xl:items-center xl:gap-4 xl:w-full"}>
+                            <ul className={"flex items-center gap-4 text-white"}>
+                                <li><Link href="">Sponsors</Link></li>
+                                <li><Link href="">Chapters</Link></li>
+                                <li><Link href="">Events</Link></li>
+                            </ul>
+                        </div> */}
+
+                        <Menubar className={"bg-transparent border-none active:bg-transparent focus:bg-transparent focus-visible:bg-transparent data-[state=open]:bg-transparent aria-selected:bg-transparent group-active:bg-transparent shadow-md"}>
+                            <MenubarMenu>
+                                <MenubarTrigger className="p-1 bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10">
+                                    <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 border-none text-white" />
+                                    <Moon className="absolute h-[1.2rem] w-[1.2rem]  rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 border-none text-white" />
+                                    <span className="sr-only">Toggle theme</span>
+                                </MenubarTrigger>
+                                <MenubarContent className={""} align="end">
+                                    <MenubarItem onClick={() => setTheme("light")}>
+                                        Light
+                                    </MenubarItem>
+                                    <MenubarItem onClick={() => setTheme("dark")}>
+                                        Dark
+                                    </MenubarItem>
+                                    <MenubarItem onClick={() => setTheme("system")}>
+                                        System
+                                    </MenubarItem>
+                                </MenubarContent>
+                            </MenubarMenu>
+
+                        </Menubar>
 
 
-                                                        ))}
+                        {/* Shadcn for nav links */}
 
-                                                    </SidebarMenuSub>
-                                                </CollapsibleContent>
-                                            </SidebarMenuItem>
-                                        </Collapsible>
-                                        <Collapsible defaultOpen className="group/collapsible">
-                                            <SidebarMenuItem>
-                                                <CollapsibleTrigger asChild>
-                                                    <SidebarMenuButton>
-                                                        Events
+                        <div className={"hidden xl:block"}>
+                            <Menubar className={"bg-transparent border-none active:bg-transparent focus:bg-transparent focus-visible:bg-transparent data-[state=open]:bg-transparent aria-selected:bg-transparent group-active:bg-transparent shadow-md text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>
 
-                                                        <ChevronsUpDown className="h-4 w-4" />
-
-                                                    </SidebarMenuButton>
-                                                </CollapsibleTrigger>
-                                                <CollapsibleContent>
-                                                    <SidebarMenuSub>
-                                                        {eventsContents.map((event) => (
-                                                            <EventMobileItem key={event.title} title={event.title} href={event.href} subEvents={event.subEvents} />
-                                                        ))}
-
-                                                    </SidebarMenuSub>
-                                                </CollapsibleContent>
-                                            </SidebarMenuItem>
-                                        </Collapsible>
-                                    </SidebarMenu>
-                                </SidebarGroupContent>
-                            </SidebarGroup>
-
-                        </SidebarContent>
-                    </Sidebar>
-
-                </div>
-            </nav>
+                                <MenubarMenu>
+                                    <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>Chapters</MenubarTrigger>
+                                </MenubarMenu>
+                                <MenubarMenu>
+                                    <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>Events</MenubarTrigger>
+                                    <MenubarContent className={"max-w-24 mt-2"} align="start">
+                                        {eventsContents.map((event) => (
+                                            <EventItem key={event.title} title={event.title} href={event.href} subEvents={event.subEvents} />
+                                        ))}
+                                    </MenubarContent>
+                                </MenubarMenu>
 
 
-        </header>
+
+                                {/* <MenubarMenu>
+                                    <MenubarTrigger>Details</MenubarTrigger>
+                                    <MenubarContent align="end" className={"max-h-64 overflow-y-auto hidden lg:block backdrop-blur-md opacity-90"}>
+                                        {moreContents.map((moreContent) => (
+                                            <MoreItem
+                                                key={moreContent.title}
+                                                title={moreContent.title}
+                                                src={moreContent.src}
+                                                href={moreContent.href}
+                                                className={"px-2 py-4"}
+                                            >
+                                                {moreContent.description}
+                                            </MoreItem>
+                                        ))}
+                                    </MenubarContent>
+                                </MenubarMenu> */}
+                            </Menubar>
+                        </div>
+
+                        <Link className={"hidden xl:block"} href="https://docs.google.com/forms/d/e/1FAIpQLSeDYPVS5cLgbcmZulvzG-ElgBJJGd94WIdtpZP56IfOwp1F6Q/viewform?usp=dialog">
+                            <button className={"bg-white text-black font-black w-[10rem] px-7 py-3 rounded-full"}>
+                                Register Now
+                            </button>
+                        </Link>
+                    </div>
+
+
+
+                    <SidebarTrigger className={"xl:hidden text-white bg-transparent border-none active:bg-transparent focus:bg-transparent focus-visible:bg-transparent data-[state=open]:bg-transparent aria-selected:bg-transparent group-active:bg-transparent active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white flex items-center space-x-1 rounded-md border shadow-md ml-3 h-[36px] w-[36px]"} />
+
+                    <div className={"xl:hidden"}>
+                        <Sidebar side={"right"} collapsible={"offcanvas"} variant={"sidebar"} >
+                            <SidebarContent>
+                                <SidebarGroup>
+                                    <SidebarGroupContent>
+                                        <SidebarMenu>
+                                            <Collapsible defaultOpen className="group/collapsible">
+                                                <SidebarMenuItem>
+                                                    <CollapsibleTrigger asChild>
+                                                        <SidebarMenuButton>
+                                                            KitaHack 2025 Info
+
+                                                            <ChevronsUpDown className="h-4 w-4" />
+
+                                                        </SidebarMenuButton>
+                                                    </CollapsibleTrigger>
+                                                    <CollapsibleContent>
+                                                        <SidebarMenuSub>
+                                                            {moreContents.map((moreContent) => (
+
+
+                                                                <MoreMobileItem
+                                                                    key={moreContent.title}
+                                                                    title={moreContent.title}
+                                                                    src={moreContent.src}
+                                                                    href={moreContent.href}
+                                                                    className={"px-2 py-3"}
+                                                                >
+                                                                    {moreContent.description}
+                                                                </MoreMobileItem>
+
+
+                                                            ))}
+
+                                                        </SidebarMenuSub>
+                                                    </CollapsibleContent>
+                                                </SidebarMenuItem>
+                                            </Collapsible>
+                                            <Collapsible defaultOpen className="group/collapsible">
+                                                <SidebarMenuItem>
+                                                    <CollapsibleTrigger asChild>
+                                                        <SidebarMenuButton>
+                                                            Events
+
+                                                            <ChevronsUpDown className="h-4 w-4" />
+
+                                                        </SidebarMenuButton>
+                                                    </CollapsibleTrigger>
+                                                    <CollapsibleContent>
+                                                        <SidebarMenuSub>
+                                                            {eventsContents.map((event) => (
+                                                                <EventMobileItem key={event.title} title={event.title} href={event.href} subEvents={event.subEvents} />
+                                                            ))}
+
+                                                        </SidebarMenuSub>
+                                                    </CollapsibleContent>
+                                                </SidebarMenuItem>
+                                            </Collapsible>
+                                        </SidebarMenu>
+                                    </SidebarGroupContent>
+                                </SidebarGroup>
+
+                            </SidebarContent>
+                        </Sidebar>
+
+                    </div>
+                </nav>
+
+
+            </header>
+        </>
     )
 }
 export default Header
+
+
 
