@@ -6,6 +6,7 @@ import * as React from "react"
 import "./globals.css";
 import HeaderFooter from "./_components/layouts/HeaderFooter";
 import { ThemeProvider } from "@/components/theme-provider";
+import Image from "next/image";
 
 
 
@@ -51,8 +52,23 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+
           <HeaderFooter>
-            {children}
+            
+
+              <div className="absolute inset-0 w-full h-[24rem] z-[-20]">
+                <Image
+                  src="/images/gradient-navbar.png"
+                  alt="Background"
+                  layout="fill"
+                  objectFit="cover"
+                  className="opacity-80 [mask-image:linear-gradient(to_bottom,black_10%,transparent_70%)] md:[mask-image:linear-gradient(to_bottom,black_10%,transparent_90%)] backdrop-blur-lg"
+                />
+              </div>
+
+              {children}
+           
+          
           </HeaderFooter>
         </ThemeProvider>
 

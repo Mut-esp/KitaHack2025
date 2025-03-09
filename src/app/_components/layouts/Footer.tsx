@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer className="flex flex-col text-gray-600 dark:text-gray-400 w-full relative">
             <img src="/images/gradient-footer.png" alt="Gradient Navbar" className="absolute top-12 md:top-4 2xl:hidden left-0 w-full" />
-            <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 grid-row-3 md:grid-row-1 gap-8 md:gap-12 lg:gap-8 z-10 bg-white dark:bg-black mt-24 py-8 md:py-14 md:px-24">
+            <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 grid-row-3 md:grid-row-1 gap-8 md:gap-12 lg:gap-8 z-10 bg-white dark:bg-[hsl(0,0%,6.9%)] mt-24 py-8 md:py-14 md:px-24">
                 <div className="col-span-1 md:col-span-2 lg:col-span-4 gap-1 flex flex-col text-center md:text-left mx-auto md:mx-0">
                     <Image
                         src="/images/KitaHack2025-logo.svg"
@@ -35,7 +35,7 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <div className="w-full mx-auto relative before:content-[''] before:absolute before:left-0 before:right-0 before:top-0 before:h-[1px] before:bg-[linear-gradient(to_right,_rgba(0,0,0,0)_30%,_#F4F3FA_50%,_rgba(0,0,0,0)_70%)] z-10 bg-white dark:bg-black">
+            <div className="w-full mx-auto relative before:content-[''] before:absolute before:left-0 before:right-0 before:top-0 before:h-[1px] before:bg-[linear-gradient(to_right,_rgba(0,0,0,0)_30%,_#F4F3FA_50%,_rgba(0,0,0,0)_70%)] z-10 bg-white dark:bg-[hsl(0,0%,6.9%)]">
                 <div className="px-6 py-12 mx-auto max-w-7xl md:flex md:items-center md:justify-between md:px-32 lg:px-52">
                     <div className="flex justify-center space-x-6 md:order-2">
                         <a href="https://www.instagram.com/kitahack.my" className="text-gray-400 hover:text-gray-500 transition-colors duration-200">
