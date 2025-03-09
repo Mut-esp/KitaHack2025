@@ -308,8 +308,8 @@ const GoogleWorkSpaceWithAppSheet: React.FC<GoogleWorkSpaceWithAppSheetProps> = 
                                         <DialogTrigger className={"mt-5 mb-2 bg-blue-500 transition ease-in-out delay-50 hover:bg-white text-white hover:text-blue-500 hover:border hover:border-blue-700 font-bold py-2 px-4 rounded dark:hover:bg-gray-700 dark:hover:text-white dark:hover:border-white"}>View Bio
 
                                         </DialogTrigger>
-                                        <DialogContent>
-                                            <DialogHeader className={"space-y-5"}>
+                                        <DialogContent className={"w-4/5 h-4/5 overflow-scroll border rounded-md"}>
+                                            <DialogHeader className={"space-y-5 mt-4"}>
                                                 <DialogDescription className="flex justify-center">
                                                     <Image src={speaker.image} alt={speaker.name} width={250} height={250} className="rounded-md" />
                                                 </DialogDescription>
