@@ -50,7 +50,7 @@ const HomeLandingSection = () => {
                 <div className="px-6 text-center text-gray-800 md:px-12 lg:text-left xl:px-52">
 
                     {/* Grid Layout */}
-                    <div className="grid items-center gap-12 lg:grid-cols-2">
+                    <div className="grid items-center gap-12 lg:grid-cols-2" id="sponsors">
                         <div className="mt-12 lg:mt-0">
                             {/* Component Badge */}
                             <span className="bg-purple-100 inline-flex items-center rounded-full border border-purple-500 px-3 py-1 text-sm text-purple-700">

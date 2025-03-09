@@ -12,11 +12,15 @@ const HeaderFooter: React.FC<{ children: React.ReactNode }> = ({ children }) => 
         <>
 
             <SidebarProvider className={"block"} defaultOpen={false}>
-                <Header />
+                <div className={"relative"}>
 
-                {children}
+                    <Header />
 
-                <Footer />
+
+                    {children}
+
+                    <Footer />
+                </div>
 
             </SidebarProvider>
 

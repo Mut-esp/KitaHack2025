@@ -71,11 +71,11 @@ type EventContent = {
 
 const eventsContents: EventContent[] = [
 
-    {
-        title: "Coming Soon",
-        href: "",
-        subEvents: undefined, // Set subEvents to undefined 
-    }, // use this for no events
+    // {
+    //     title: "Coming Soon",
+    //     href: "",
+    //     subEvents: undefined, // Set subEvents to undefined 
+    // }, // use this for no events
     // {
     //     title: "Demo Day",
     //     href: "",
@@ -91,24 +91,32 @@ const eventsContents: EventContent[] = [
     //     href: "",
     //     subEvents: undefined, // Set subEvents to undefined instead of null
     // },
-    // {
-    //     title: "Workshops",
-    //     href: "",
-    //     subEvents: [
-    //         {
-    //             title: "No Workshops Yet",
-    //             href: "",
-    //         }, // use this for no workshops
-    //         {
-    //             title: "Sunway React & Firebase Workshop Series",
-    //             href: "/ReactAndFirebaseWorkshop",
-    //         },
-    //         {
-    //             title: "KDU Android Workshop",
-    //             href: "#sub-event-2",
-    //         },
-    //     ],
-    // }
+    {
+        title: "Workshops",
+        href: "",
+        subEvents: [
+            // {
+            //     title: "No Workshops Yet",
+            //     href: "",
+            // }, // use this for no workshops
+            {
+                title: "Tensorflow Workshop",
+                href: "/TensorflowWorkshop",
+            }, // use this for no workshops
+            {
+                title: "Google Workspace with Appsheet",
+                href: "/GoogleWorkspaceWithAppsheet",
+            }, // use this for no workshops
+            // {
+            //     title: "Sunway React & Firebase Workshop Series",
+            //     href: "/ReactAndFirebaseWorkshop",
+            // },
+            // {
+            //     title: "KDU Android Workshop",
+            //     href: "#sub-event-2",
+            // },
+        ],
+    }
 ];
 
 
@@ -157,7 +165,6 @@ const moreContents: { title: string; href: string; description: string; src: str
     //     src: "images/email.svg"
     // },
 ]
-
 
 
 const Header = ({ }) => {
@@ -336,18 +343,17 @@ const Header = ({ }) => {
 
         <>
 
-            <div className="absolute inset-0 w-full h-3/5">
+            {/* <div className="absolute inset-0 w-full h-[24rem] z-[-20]">
                 <Image
                     src="/images/gradient-navbar.png"
                     alt="Background"
                     layout="fill"
                     objectFit="cover"
-                    className="z-[-20] opacity-80 [mask-image:linear-gradient(to_bottom,black_10%,transparent_60%)] backdrop-blur-lg"
+                    className="opacity-80 [mask-image:linear-gradient(to_bottom,black_10%,transparent_70%)] md:[mask-image:linear-gradient(to_bottom,black_10%,transparent_90%)] backdrop-blur-lg"
                 />
-            </div>
+            </div> */}
 
-            <header className="h-16 xl:h-24 text-[15px] fixed z-20 inset-0 bg-gradient-to-r from-[#FE79B9]/30 via-[#AD00FF]/30 to-[#2489FF]/30 backdrop-blur-md dark:bg-black/40">
-
+            <header className="h-16 xl:h-24 text-[15px] fixed inset-0 bg-gradient-to-r from-[#FE79B9]/30 via-[#AD00FF]/30 to-[#2489FF]/30 backdrop-blur-md dark:bg-black/40 z-20">
 
                 {/* <nav className="mx-6 lg:ml-24 lg:mr-12 flex justify-center items-center h-full min-w-screen"> */}
                 <nav className="mx-6 lg:ml-24 lg:mr-24 flex xl:grid xl:grid-cols-[1fr_auto_1fr] items-center h-full min-w-screen">
@@ -355,11 +361,20 @@ const Header = ({ }) => {
                     <div className={"hidden xl:flex xl:items-center xl:mr-auto xl:ml-10"}>
                         <Menubar className={"bg-transparent border-none active:bg-transparent focus:bg-transparent focus-visible:bg-transparent data-[state=open]:bg-transparent aria-selected:bg-transparent group-active:bg-transparent shadow-md text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>
                             <MenubarMenu>
-                                <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>FAQs</MenubarTrigger>
+                                <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>
+                                    <Link href={"/#faqs"}>
+                                        FAQs
+                                    </Link>
+
+                                </MenubarTrigger>
                             </MenubarMenu>
 
                             <MenubarMenu>
-                                <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>Sponsors</MenubarTrigger>
+                                <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>
+                                    <Link href={"/#sponsors"}>
+                                        Sponsors
+                                    </Link>
+                                </MenubarTrigger>
                             </MenubarMenu>
 
                             <MenubarMenu>
@@ -439,19 +454,19 @@ const Header = ({ }) => {
                         <div className={"hidden xl:block"}>
                             <Menubar className={"bg-transparent border-none active:bg-transparent focus:bg-transparent focus-visible:bg-transparent data-[state=open]:bg-transparent aria-selected:bg-transparent group-active:bg-transparent shadow-md text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>
 
-
                                 <MenubarMenu>
                                     <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>Chapters</MenubarTrigger>
                                 </MenubarMenu>
-
                                 <MenubarMenu>
-                                    <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"} >Events</MenubarTrigger>
-                                    <MenubarContent className={"max-w-24 "} align="end">
+                                    <MenubarTrigger className={"bg-transparent border-none active:bg-white/10 focus:bg-white/10 focus-visible:bg-white/10 data-[state=open]:bg-white/10 aria-selected:bg-white/10 group-active:bg-white/10 text-white active:text-white focus:text-white focus-visible:text-white data-[state=open]:text-white aria-selected:text-white group-active:text-white"}>Events</MenubarTrigger>
+                                    <MenubarContent className={"max-w-24 mt-2"} align="start">
                                         {eventsContents.map((event) => (
                                             <EventItem key={event.title} title={event.title} href={event.href} subEvents={event.subEvents} />
                                         ))}
                                     </MenubarContent>
                                 </MenubarMenu>
+
+
 
                                 {/* <MenubarMenu>
                                     <MenubarTrigger>Details</MenubarTrigger>
@@ -472,7 +487,7 @@ const Header = ({ }) => {
                             </Menubar>
                         </div>
 
-                        <Link className={"hidden xl:block"} href="">
+                        <Link className={"hidden xl:block"} href="https://docs.google.com/forms/d/e/1FAIpQLSeDYPVS5cLgbcmZulvzG-ElgBJJGd94WIdtpZP56IfOwp1F6Q/viewform?usp=dialog">
                             <button className={"bg-white text-black font-black w-[10rem] px-7 py-3 rounded-full"}>
                                 Register Now
                             </button>
