@@ -85,7 +85,7 @@ const TensorflowWorkshop: React.FC<TensorflowWorkshopProps> = ({
         seconds: "0",
     });
 
-    const { theme, setTheme } = useTheme();
+    const { theme} = useTheme();
 
 
     useEffect(() => {
