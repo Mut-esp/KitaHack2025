@@ -353,7 +353,7 @@ const Header = ({ }) => {
                 />
             </div> */}
 
-            <header className="h-16 xl:h-24 text-[15px] fixed inset-0 bg-gradient-to-r from-[#FE79B9]/30 via-[#AD00FF]/30 to-[#2489FF]/30 backdrop-blur-md dark:bg-black/40 z-20">
+            <header className="h-16 xl:h-24 text-[15px] fixed inset-0 bg-gradient-to-r from-[#FE79B9]/30 via-[#AD00FF]/30 to-[#2489FF]/30 backdrop-blur-3xl dark:bg-black/40 z-20">
 
                 {/* <nav className="mx-6 lg:ml-24 lg:mr-12 flex justify-center items-center h-full min-w-screen"> */}
                 <nav className="mx-6 lg:ml-24 lg:mr-24 flex xl:grid xl:grid-cols-[1fr_auto_1fr] items-center h-full min-w-screen">
@@ -410,7 +410,7 @@ const Header = ({ }) => {
                     </div>
                     <div className="">
                         <Link href={"/"}>
-                            <Image src="/images/KitaHack2025-Logo-new.svg" alt="" width={200} height={300} className="max-h-[120px] max-w-[120px] md:max-h-[200px] md:max-w-[200px] cursor-pointer xl:mx-5" />
+                            <Image src="/images/KitaHack2025-Logo-new.svg" alt="" width={200} height={300} className="max-h-[180px] max-w-[180px] md:max-h-[200px] md:max-w-[200px] cursor-pointer xl:mx-5" />
                         </Link>
                     </div>
 
