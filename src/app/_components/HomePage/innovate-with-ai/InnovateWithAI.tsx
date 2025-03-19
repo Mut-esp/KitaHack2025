@@ -7,7 +7,8 @@ const InnovateWithAISection = () => {
         {
             id: 1,
             span: "md:col-span-1 md:aspect-square",
-            background: "bg-[url('/images/kitahack-bg.png')] bg-center bg-no-repeat",
+            background: "bg-[url('/images/kitahack-bg.png')] bg-cover bg-center bg-no-repeat",
+            style: { backgroundSize: "150%" },
             content: <img src="images/KitaHack2025-logo.svg" alt="KitaHack Logo"/>,
         },
         {
@@ -66,16 +67,15 @@ const InnovateWithAISection = () => {
             </div>
 
             {/* Bento Grids */}
-            {/* Still finding a way on how to integrate the background into the grids*/}
             <div className="space-y-6 p-6 md:px-12 xl:px-52">
                 {/* First two items (Grid 3-cols) */}
                 <div className="grid grid-rows-2 md:grid-rows-none md:grid-cols-3 gap-6">
                     {bentoGrids.slice(0, 2).map((grid) => (
-                        <div key={grid.id} style={grid.style} className={`dark:bg-[#1D1D1D] hover:outline outline-[#4285F4] transition-color duration-200 bg-white shadow-lg rounded-xl flex flex-col gap-2 justify-center ${grid.span} ${grid.background}`}>
+                        <div key={grid.id} style={grid.style} className={`dark:bg-[#1D1D1D] outline outline-2 outline-[#DBDBDB] hover:outline-[#4285F4] transition-color duration-200 bg-white shadow-lg rounded-xl flex flex-col gap-2 justify-center ${grid.span} ${grid.background}`}>
                             {grid.content ? grid.content : (
                                 <>
-                                    <h2 className="text-blue-600 font-bold text-sm md:text-base">{grid.title}</h2>
-                                    <p className="text-gray-600 text-sm md:text-base dark:text-gray-400"><i>{grid.text}</i></p>
+                                    <h2 className="text-blue-600 font-bold text-sm md:text-base max-w-[400px]">{grid.title}</h2>
+                                    <p className="text-gray-600 text-sm md:text-base dark:text-gray-400 max-w-[480px]"><i>{grid.text}</i></p>
                                 </>
                             )}
                         </div>
@@ -88,7 +88,7 @@ const InnovateWithAISection = () => {
                         <div 
                             key={grid.id} 
                             style={grid.style} 
-                            className={`hover:outline outline-[#4285F4] transition-color duration-200 relative justify-center md:justify-normal dark:bg-[#1D1D1D] bg-white shadow-lg rounded-xl p-6 flex flex-col gap-2 ${grid.span} ${grid.background}`}
+                            className={`outline outline-2 outline-[#DBDBDB] hover:outline-[#4285F4] transition-color duration-200 relative justify-center md:justify-normal dark:bg-[#1D1D1D] bg-white shadow-lg rounded-xl p-6 flex flex-col gap-2 ${grid.span} ${grid.background}`}
                         >
                             {grid.id === 3 && (
                                 <>
@@ -104,10 +104,23 @@ const InnovateWithAISection = () => {
                             )}
                     
                             {grid.content ? grid.content : (
-                                <>
-                                    <h2 className="text-blue-600 font-bold text-sm md:text-base">{grid.title}</h2>
-                                    <p className="text-gray-600 text-sm md:text-base dark:text-gray-400"><i>{grid.text}</i></p>
-                                </>
+                                grid.id !== 3 ? (
+                                    <>
+                                        <h2 className="text-blue-600 font-bold text-sm md:text-base">{grid.title}</h2>
+                                        <p className="text-gray-600 text-sm md:text-base dark:text-gray-400 w-[68%]">
+                                            <i>{grid.text}</i>
+                                        </p>
+                                    </>
+                                ) : (
+                                    <div className="text-center flex flex-col gap-2 items-center">
+                                        <>
+                                            <h2 className="text-blue-600 font-bold text-sm md:text-base">{grid.title}</h2>
+                                            <p className="text-gray-600 text-sm md:text-base dark:text-gray-400 w-[68%]">
+                                                <i>{grid.text}</i>
+                                            </p>
+                                        </>
+                                    </div>
+                                )
                             )}
                         </div>
                     ))}
