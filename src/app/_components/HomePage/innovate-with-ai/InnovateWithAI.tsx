@@ -71,7 +71,7 @@ const InnovateWithAISection = () => {
                 {/* First two items (Grid 3-cols) */}
                 <div className="grid grid-rows-2 md:grid-rows-none md:grid-cols-3 gap-6">
                     {bentoGrids.slice(0, 2).map((grid) => (
-                        <div key={grid.id} style={grid.style} className={`dark:bg-[#1D1D1D] outline outline-2 outline-[#DBDBDB] hover:outline-[#4285F4] transition-color duration-200 bg-white shadow-lg rounded-xl flex flex-col gap-2 justify-center ${grid.span} ${grid.background}`}>
+                        <div key={grid.id} style={grid.style} className={`dark:bg-[#1D1D1D] outline outline-2 dark:outline-2 outline-[#DBDBDB] dark:outline-gray-800 hover:outline-[#4285F4] dark:hover:outline-[#4285F4] transition-color duration-200 bg-white shadow-lg rounded-xl flex flex-col gap-2 justify-center ${grid.span} ${grid.background}`}>
                             {grid.content ? grid.content : (
                                 <>
                                     <h2 className="text-blue-600 font-bold text-sm md:text-base max-w-[400px]">{grid.title}</h2>
@@ -88,17 +88,17 @@ const InnovateWithAISection = () => {
                         <div 
                             key={grid.id} 
                             style={grid.style} 
-                            className={`outline outline-2 outline-[#DBDBDB] hover:outline-[#4285F4] transition-color duration-200 relative justify-center md:justify-normal dark:bg-[#1D1D1D] bg-white shadow-lg rounded-xl p-6 flex flex-col gap-2 ${grid.span} ${grid.background}`}
+                            className={`outline outline-2 outline-[#DBDBDB] dark:outline-2 dark:outline-gray-800 hover:outline-[#4285F4] dark:hover:outline-[#4285F4] transition-color duration-200 relative justify-center md:justify-normal dark:bg-[#1D1D1D] bg-white shadow-lg rounded-xl p-6 flex flex-col gap-2 ${grid.span} ${grid.background}`}
                         >
                             {grid.id === 3 && (
                                 <>
                                     <div className="absolute top-[15%] left-0 transform -translate-x-1/2 hidden md:block">
                                         <div className="w-16">{grid.bubblesvai}</div>
-                                        <div className="absolute top-6 left-10 w-32">{grid.bubblesgas}</div>
+                                        <div className="absolute top-6 left-10 w-48">{grid.bubblesgas}</div>
                                     </div>
                                     <div className="absolute top-[15%] right-[-7%] transform -translate-x-1/2 hidden md:block">
                                         <div className="w-16">{grid.bubblesvai}</div>
-                                        <div className="absolute top-6 right-10 w-32">{grid.bubblesgmi}</div>
+                                        <div className="absolute top-6 right-10 w-48">{grid.bubblesgmi}</div>
                                     </div>
                                 </>
                             )}
