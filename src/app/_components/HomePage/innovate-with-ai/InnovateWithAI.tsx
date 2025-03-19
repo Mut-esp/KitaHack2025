@@ -82,7 +82,7 @@ const InnovateWithAISection = () => {
                     ))}
                 </div>
 
-                {/* Remaining items (Grid 2-cols) */}
+                {/* Remaining items (Grid 3-cols) */}
                 <div className="grid grid-rows-3 md:grid-rows-none md:grid-cols-2 gap-6">
                     {bentoGrids.slice(2).map((grid) => (
                         <div 
@@ -92,13 +92,13 @@ const InnovateWithAISection = () => {
                         >
                             {grid.id === 3 && (
                                 <>
-                                    <div className="absolute top-1/4 left-0 transform -translate-x-1/2 hidden md:block">
-                                        <div className="w-16">{grid.bubblesvai}</div> {/* VAI at center */}
-                                        <div className="absolute top-6 left-10 w-20">{grid.bubblesgas}</div> {/* GAS southeast */}
+                                    <div className="absolute top-[15%] left-0 transform -translate-x-1/2 hidden md:block">
+                                        <div className="w-16">{grid.bubblesvai}</div>
+                                        <div className="absolute top-6 left-10 w-32">{grid.bubblesgas}</div>
                                     </div>
-                                    <div className="absolute top-1/4 right-[-7%] transform -translate-x-1/2 hidden md:block">
-                                        <div className="w-16">{grid.bubblesvai}</div> {/* VAI at center */}
-                                        <div className="absolute top-6 right-10 w-20">{grid.bubblesgmi}</div> {/* GMI southwest */}
+                                    <div className="absolute top-[15%] right-[-7%] transform -translate-x-1/2 hidden md:block">
+                                        <div className="w-16">{grid.bubblesvai}</div>
+                                        <div className="absolute top-6 right-10 w-32">{grid.bubblesgmi}</div>
                                     </div>
                                 </>
                             )}
