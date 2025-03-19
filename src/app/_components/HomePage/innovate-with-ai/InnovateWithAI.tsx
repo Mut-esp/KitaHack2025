@@ -48,7 +48,7 @@ const InnovateWithAISection = () => {
     ]
 
     return (
-        <section id="kitahack-info" className="container px-6 mx-auto">
+        <section id="annovate-with-ai" className="container px-6 mx-auto">
             <div className="px-6 text-gray-800 md:mx-12 lg:text-left xl:mx-52"></div>
             <div className="flex flex-col justify-center items-center text-center gap-4">
                 {/* Badge Componenet */}
